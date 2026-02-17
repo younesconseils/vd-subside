@@ -110,6 +110,22 @@ export default function ContactForm({ source = 'homepage', inline = false }: Con
 
   return (
     <form onSubmit={handleSubmit} className={`space-y-${inline ? '4' : '6'}`}>
+      {/* Notice importante */}
+      <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+        <div className="flex items-start gap-3">
+          <svg className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+            <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+          </svg>
+          <div className="text-sm">
+            <p className="font-semibold text-gray-900 mb-1">Nous vous répondrons par email</p>
+            <p className="text-gray-700">
+              En raison du nombre élevé de demandes, nous vous contacterons uniquement par email (<strong>contact@vd-subside.ch</strong>).
+              Merci de vérifier régulièrement vos emails et votre dossier spam.
+            </p>
+          </div>
+        </div>
+      </div>
+
       {/* Nom et Prénom */}
       <div className="grid md:grid-cols-2 gap-4">
         <div>
@@ -163,13 +179,12 @@ export default function ContactForm({ source = 'homepage', inline = false }: Con
         </div>
         <div>
           <label htmlFor="telephone" className="block text-sm font-medium text-gray-700 mb-2">
-            Téléphone *
+            Téléphone (optionnel)
           </label>
           <input
             type="tel"
             id="telephone"
             name="telephone"
-            required
             value={formData.telephone}
             onChange={handleChange}
             className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-green-600 focus:ring-2 focus:ring-green-600/20 outline-none transition-all"
