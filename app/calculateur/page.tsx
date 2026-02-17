@@ -69,7 +69,7 @@ export default function CalculateurPage() {
             </div>
 
             <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">
-              Principe du calcul du subside 2025
+              Principe du calcul du subside 2026
             </h3>
 
             <p>

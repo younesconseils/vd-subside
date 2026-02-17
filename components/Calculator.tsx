@@ -31,7 +31,7 @@ export default function Calculator() {
     // L'objectif du subside est de limiter la charge à 10% du RDU
     // Estimation très approximative (ne tient pas compte de tous les paramètres)
 
-    // Estimation de la prime moyenne par personne dans le canton de Vaud (2025)
+    // Estimation de la prime moyenne par personne dans le canton de Vaud (2026)
     const avgPremium = 400; // CHF/mois environ
     const yearlyPremium = avgPremium * 12 * size;
 

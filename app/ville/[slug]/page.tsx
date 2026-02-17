@@ -53,8 +53,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     metadataBase: new URL('https://vd-subside.ch'),
-    title: `Subside Assurance Maladie ${city.name} 2025 | VD-Subside`,
-    description: `Subside assurance maladie à ${city.name} : calculateur gratuit, accompagnement, conditions 2025. Habitants de ${city.name}, économisez jusqu'à 8'400 CHF/an. Réponse sous 24h.`,
+    title: `Subside Assurance Maladie ${city.name} 2026 | Demande Gratuite`,
+    description: `Subside assurance maladie à ${city.name} (Canton de Vaud) : calculateur gratuit, accompagnement personnalisé, conditions 2026. Habitants de ${city.name}, économisez jusqu'à 8'400 CHF/an sur vos primes.`,
     keywords: [
       // Mots-clés locaux principaux
       `subside ${city.name.toLowerCase()}`,
@@ -80,7 +80,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       `formulaire subside ${city.name.toLowerCase()}`,
     ],
     openGraph: {
-      title: `Subside Assurance Maladie ${city.name} 2025`,
+      title: `Subside Assurance Maladie ${city.name} 2026`,
       description: `Calculateur gratuit et accompagnement pour obtenir votre subside à ${city.name}. Réponse sous 24h.`,
       url: `https://vd-subside.ch/ville/${params.slug}`,
       siteName: 'VD-Subside',

@@ -2,8 +2,8 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'En Savoir Plus sur les Subsides | VD-Subside',
-  description: 'Découvrez comment fonctionne le système de subsides d\'assurance maladie dans le Canton de Vaud. Conditions, montants et démarches expliquées.',
+  title: 'Subside Assurance Maladie Vaud 2026 : Tout Savoir | Conditions, Montants, Démarches',
+  description: 'Tout savoir sur le subside assurance maladie dans le Canton de Vaud en 2026. Conditions d\'éligibilité, montants selon votre situation, démarches OVAM et accompagnement gratuit.',
 };
 
 export default function EnSavoirPlusPage() {
