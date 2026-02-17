@@ -233,41 +233,77 @@ export default async function GuidePage({ params }: PageProps) {
         </div>
       </section>
 
-      {/* Formulaire */}
-      <section id="formulaire" className="section-padding bg-gradient-to-br from-gray-50 to-green-50">
-        <div className="container-custom max-w-3xl">
-          <div className="text-center mb-10">
+      {/* Formulaire ou CTA vers /assurance */}
+      {guide.ctaLink ? (
+        <section id="formulaire" className="section-padding bg-gradient-to-br from-gray-50 to-blue-50">
+          <div className="container-custom max-w-3xl text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               {guide.cta}
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Remplissez le formulaire ci-dessous. Notre équipe vous contactera sous 24h pour vous accompagner <strong>gratuitement</strong> dans votre demande de subside.
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
+              Un conseiller agréé <strong>FINMA</strong> et certifié <strong>CICERO</strong> analyse votre situation et vous propose la meilleure offre. 100% gratuit et sans engagement.
             </p>
-          </div>
-          <div className="relative">
-            <div className="absolute -inset-1 bg-gradient-to-r from-green-600 to-emerald-600 rounded-3xl blur-2xl opacity-15"></div>
-            <div className="relative bg-white p-8 md:p-12 rounded-2xl shadow-2xl border border-gray-200">
-              <ContactForm source={`guide/${guide.slug}`} />
+            <Link
+              href={guide.ctaLink}
+              className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-10 rounded-xl transition-all duration-300 shadow-lg shadow-blue-600/20 hover:shadow-xl hover:shadow-blue-600/30 text-lg"
+            >
+              Demander un conseil gratuit
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
+            <div className="mt-8 grid grid-cols-3 gap-4 text-center">
+              <div className="bg-white p-4 rounded-xl border border-gray-200">
+                <div className="text-2xl mb-1">🏛️</div>
+                <div className="text-xs text-gray-600 font-medium">Agréé FINMA</div>
+              </div>
+              <div className="bg-white p-4 rounded-xl border border-gray-200">
+                <div className="text-2xl mb-1">💰</div>
+                <div className="text-xs text-gray-600 font-medium">100% gratuit</div>
+              </div>
+              <div className="bg-white p-4 rounded-xl border border-gray-200">
+                <div className="text-2xl mb-1">🤝</div>
+                <div className="text-xs text-gray-600 font-medium">Sans engagement</div>
+              </div>
             </div>
           </div>
+        </section>
+      ) : (
+        <section id="formulaire" className="section-padding bg-gradient-to-br from-gray-50 to-green-50">
+          <div className="container-custom max-w-3xl">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                {guide.cta}
+              </h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Remplissez le formulaire ci-dessous. Notre équipe vous contactera sous 24h pour vous accompagner <strong>gratuitement</strong> dans votre demande de subside.
+              </p>
+            </div>
+            <div className="relative">
+              <div className="absolute -inset-1 bg-gradient-to-r from-green-600 to-emerald-600 rounded-3xl blur-2xl opacity-15"></div>
+              <div className="relative bg-white p-8 md:p-12 rounded-2xl shadow-2xl border border-gray-200">
+                <ContactForm source={`guide/${guide.slug}`} />
+              </div>
+            </div>
 
-          {/* Réassurance sous formulaire */}
-          <div className="mt-8 grid grid-cols-3 gap-4 text-center">
-            <div className="bg-white p-4 rounded-xl border border-gray-200">
-              <div className="text-2xl mb-1">🔒</div>
-              <div className="text-xs text-gray-600 font-medium">Données sécurisées</div>
-            </div>
-            <div className="bg-white p-4 rounded-xl border border-gray-200">
-              <div className="text-2xl mb-1">⏱️</div>
-              <div className="text-xs text-gray-600 font-medium">Réponse 24h</div>
-            </div>
-            <div className="bg-white p-4 rounded-xl border border-gray-200">
-              <div className="text-2xl mb-1">💚</div>
-              <div className="text-xs text-gray-600 font-medium">100% gratuit</div>
+            {/* Réassurance sous formulaire */}
+            <div className="mt-8 grid grid-cols-3 gap-4 text-center">
+              <div className="bg-white p-4 rounded-xl border border-gray-200">
+                <div className="text-2xl mb-1">🔒</div>
+                <div className="text-xs text-gray-600 font-medium">Données sécurisées</div>
+              </div>
+              <div className="bg-white p-4 rounded-xl border border-gray-200">
+                <div className="text-2xl mb-1">⏱️</div>
+                <div className="text-xs text-gray-600 font-medium">Réponse 24h</div>
+              </div>
+              <div className="bg-white p-4 rounded-xl border border-gray-200">
+                <div className="text-2xl mb-1">💚</div>
+                <div className="text-xs text-gray-600 font-medium">100% gratuit</div>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* Guides liés */}
       {relatedGuides.length > 0 && (

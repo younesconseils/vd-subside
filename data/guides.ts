@@ -22,6 +22,7 @@ export interface Guide {
   }[];
   faq: { question: string; reponse: string }[];
   cta: string;
+  ctaLink?: string;
   relatedSlugs: string[];
 }
 
@@ -986,7 +987,8 @@ export const guides: Guide[] = [
         reponse: 'Les assureurs ne peuvent pas refuser un subside. C\'est l\'OVAM qui le verse directement à l\'assureur. Si un problème survient, contactez l\'OVAM au 021 557 47 47.',
       },
     ],
-    cta: 'Besoin d\'aide pour choisir votre assurance avec subside ?',
+    cta: 'Besoin d\'aide pour choisir votre assurance ? Conseil gratuit par un conseiller agréé FINMA',
+    ctaLink: '/assurance',
     relatedSlugs: ['bareme-subside-vaud-2026', 'ovam-contact-telephone-horaires'],
   },
   {
@@ -1098,7 +1100,8 @@ export const guides: Guide[] = [
         reponse: 'Non, votre subside ne change pas si vous changez de modèle ou de franchise. Mais en choisissant un modèle moins cher, votre reste à charge diminue encore plus.',
       },
     ],
-    cta: 'Optimisez vos primes : demandez votre subside',
+    cta: 'Optimisez vos primes : conseil gratuit par un expert agréé FINMA',
+    ctaLink: '/assurance',
     relatedSlugs: ['changer-assurance-maladie-subside-vaud', 'bareme-subside-vaud-2026'],
   },
   {
@@ -1276,7 +1279,8 @@ export const guides: Guide[] = [
         reponse: 'En valeur absolue, les cantons avec les primes les plus élevées (Genève, Bâle-Ville) ont des subsides maximaux plus élevés. Mais en proportion et en nombre de bénéficiaires, Vaud est parmi les plus généreux.',
       },
     ],
-    cta: 'Profitez du système vaudois : demandez votre subside',
+    cta: 'Comparez les caisses maladie : conseil gratuit par un conseiller agréé FINMA',
+    ctaLink: '/assurance',
     relatedSlugs: ['bareme-subside-vaud-2026', 'plafond-revenu-subside-vaud'],
   },
   {
@@ -1323,7 +1327,8 @@ export const guides: Guide[] = [
         reponse: 'Les prévisions indiquent une poursuite de la hausse, bien que le rythme puisse varier. D\'où l\'importance d\'optimiser votre situation dès maintenant.',
       },
     ],
-    cta: 'Compensez la hausse : demandez votre subside maintenant',
+    cta: 'Compensez la hausse des primes : conseil gratuit par un expert agréé FINMA',
+    ctaLink: '/assurance',
     relatedSlugs: ['economiser-prime-assurance-maladie-vaud', 'bareme-subside-vaud-2026'],
   },
 ];

@@ -106,9 +106,54 @@ export default function MentionsLegalesPage() {
               </ul>
             </section>
 
+            {/* Activité de conseil et courtage */}
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">3. Activité de conseil et courtage en assurance</h2>
+
+              <div className="bg-blue-50 border-l-4 border-blue-600 p-6 rounded-r-lg my-6">
+                <h3 className="font-bold text-blue-900 mb-3">🏛️ CONSEIL ET COURTAGE EN ASSURANCE MALADIE</h3>
+                <div className="text-sm text-gray-800 space-y-3">
+                  <p>
+                    <strong>VD-Subside.ch propose, en complément de son service d&apos;accompagnement pour les subsides, un service de conseil et courtage en assurance maladie.</strong>
+                  </p>
+                  <p>
+                    Ce service est assuré par un <strong>conseiller agréé FINMA</strong> (Autorité fédérale de surveillance des marchés financiers) et <strong>certifié CICERO</strong> (registre de formation continue de l&apos;Association Suisse d&apos;Assurances ASA).
+                  </p>
+                </div>
+              </div>
+
+              <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">Nature de l&apos;activité</h3>
+              <p className="text-gray-700">
+                Notre activité de conseil et courtage en assurance maladie consiste exclusivement à :
+              </p>
+              <ul className="list-disc pl-6 text-gray-700 mt-3 space-y-2">
+                <li><strong>Analyser</strong> votre situation d&apos;assurance actuelle</li>
+                <li><strong>Comparer</strong> les offres des différentes caisses maladie du marché suisse</li>
+                <li><strong>Recommander</strong> la caisse et le modèle les plus adaptés à votre profil</li>
+                <li><strong>Accompagner</strong> le changement de caisse si vous le souhaitez (résiliation, adhésion)</li>
+                <li><strong>Assurer un suivi annuel</strong> pour vérifier que votre couverture reste optimale</li>
+              </ul>
+
+              <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">Rémunération et gratuité</h3>
+              <p className="text-gray-700">
+                Le service de conseil est <strong>100% gratuit pour le client</strong>. Le conseiller est rémunéré exclusivement par les <strong>commissions de courtage versées par les assureurs</strong>, conformément aux pratiques standard du secteur en Suisse. Cela n&apos;influence en rien l&apos;objectivité de nos recommandations.
+              </p>
+
+              <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">Agrément et certifications</h3>
+              <ul className="list-disc pl-6 text-gray-700 mt-3 space-y-2">
+                <li><strong>FINMA</strong> : Notre conseiller est enregistré auprès de l&apos;Autorité fédérale de surveillance des marchés financiers, conformément à la Loi sur la surveillance des assurances (LSA)</li>
+                <li><strong>CICERO</strong> : Notre conseiller est certifié dans le registre de formation continue de l&apos;Association Suisse d&apos;Assurances (ASA), garantissant une mise à jour régulière des compétences</li>
+              </ul>
+
+              <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">Absence d&apos;obligation</h3>
+              <p className="text-gray-700">
+                Le conseil est <strong>sans engagement</strong>. Vous êtes entièrement libre de suivre ou non les recommandations. Aucune obligation de souscrire auprès d&apos;un assureur particulier ne découle de notre conseil.
+              </p>
+            </section>
+
             {/* Responsabilité */}
             <section className="mb-12">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">3. Limitation de responsabilité</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">4. Limitation de responsabilité</h2>
 
               <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">Exactitude des informations</h3>
               <p className="text-gray-700">
@@ -135,7 +180,7 @@ export default function MentionsLegalesPage() {
 
             {/* Protection des données */}
             <section className="mb-12">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">4. Protection des données personnelles</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">5. Protection des données personnelles</h2>
 
               <div className="bg-blue-50 border-l-4 border-blue-600 p-6 rounded-r-lg my-6">
                 <h3 className="font-bold text-blue-900 mb-3">🔒 Conformité LPD & RGPD</h3>
@@ -192,7 +237,7 @@ export default function MentionsLegalesPage() {
 
             {/* Cookies */}
             <section className="mb-12">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">5. Cookies</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">6. Cookies</h2>
               <p className="text-gray-700">
                 Nous utilisons uniquement des cookies essentiels et analytiques :
               </p>
@@ -207,7 +252,7 @@ export default function MentionsLegalesPage() {
 
             {/* Propriété intellectuelle */}
             <section className="mb-12">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">6. Propriété intellectuelle</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">7. Propriété intellectuelle</h2>
               <p className="text-gray-700">
                 Le contenu de ce site (textes, images, logos, structure) est protégé par le droit d'auteur suisse.
                 Toute reproduction, même partielle, est interdite sans autorisation préalable.
@@ -216,7 +261,7 @@ export default function MentionsLegalesPage() {
 
             {/* Droit applicable */}
             <section className="mb-12">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">7. Droit applicable et juridiction</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">8. Droit applicable et juridiction</h2>
               <p className="text-gray-700">
                 Les présentes mentions légales sont régies par le <strong>droit suisse</strong>.
                 En cas de litige, les tribunaux du Canton de Vaud seront seuls compétents.
@@ -225,7 +270,7 @@ export default function MentionsLegalesPage() {
 
             {/* Contact */}
             <section className="mb-12">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">8. Contact</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">9. Contact</h2>
               <p className="text-gray-700">
                 Pour toute question concernant ces mentions légales ou vos données personnelles :<br />
                 <a href="mailto:info@vd-subside.ch" className="text-green-600 underline font-semibold">info@vd-subside.ch</a>
