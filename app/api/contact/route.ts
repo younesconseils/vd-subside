@@ -105,8 +105,8 @@ export async function POST(request: Request) {
                   ` : ''}
 
                   <div class="info-row">
-                    <span class="label">🔗 Source :</span>
-                    <span class="value">${data.source || 'Non spécifiée'}</span>
+                    <span class="label">🔗 Page d'origine :</span>
+                    <span class="value"><a href="https://vd-subside.ch${data.source}" style="color: #16a34a; text-decoration: underline;">https://vd-subside.ch${data.source}</a></span>
                   </div>
 
                   <div class="footer">
