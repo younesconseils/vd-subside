@@ -96,7 +96,7 @@ export default function ContactForm({ source = 'homepage', inline = false }: Con
           Demande envoyée avec succès !
         </h3>
         <p className="text-gray-600 mb-6">
-          Nous avons bien reçu votre demande. Notre équipe vous contactera par <strong>téléphone ou email</strong> dans les <strong>24 heures</strong>.
+          Nous avons bien reçu votre demande. Notre équipe vous contactera par <strong>téléphone</strong> dans les <strong>24 heures</strong>.
         </p>
         <button
           onClick={() => setStatus('idle')}
