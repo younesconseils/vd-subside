@@ -15,7 +15,6 @@ export default function ContactForm({ source = 'homepage', inline = false }: Con
     telephone: '',
     ville: '',
     situation: 'seul',
-    revenu: '',
     message: '',
     source: source,
   });
@@ -54,7 +53,6 @@ export default function ContactForm({ source = 'homepage', inline = false }: Con
           telephone: '',
           ville: '',
           situation: 'seul',
-          revenu: '',
           message: '',
           source: source,
         });
@@ -214,22 +212,6 @@ export default function ContactForm({ source = 'homepage', inline = false }: Con
             <option value="famille-3plus">Famille avec 3+ enfants</option>
           </select>
         </div>
-      </div>
-
-      {/* Revenu */}
-      <div>
-        <label htmlFor="revenu" className="block text-sm font-medium text-gray-700 mb-2">
-          Revenu annuel brut (approximatif)
-        </label>
-        <input
-          type="text"
-          id="revenu"
-          name="revenu"
-          value={formData.revenu}
-          onChange={handleChange}
-          className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-green-600 focus:ring-2 focus:ring-green-600/20 outline-none transition-all"
-          placeholder="Ex: 60'000 CHF"
-        />
       </div>
 
       {/* Message */}
