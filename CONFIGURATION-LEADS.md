@@ -73,7 +73,7 @@ Ou via l'interface Vercel : **Deployments** → **Redeploy**
 
 ### Test 2 : Vérifier la réception
 
-Tu devrais recevoir un email à **contact@vd-subside.ch** avec :
+Tu devrais recevoir un email à **info@vd-subside.ch** avec :
 - 🆕 Titre : "Nouvelle demande de subside - [Nom Prénom]"
 - 📧 Email formaté avec toutes les infos
 - ⚡ Rappel de contacter sous 24h
@@ -146,7 +146,7 @@ Tu peux aussi connecter directement à un CRM professionnel.
 ### Voir les leads reçus
 
 **Option 1 - Emails** :
-- Tous les leads arrivent par email à `contact@vd-subside.ch`
+- Tous les leads arrivent par email à `info@vd-subside.ch`
 - Créer un label Gmail "Leads VD-Subside" pour les organiser
 
 **Option 2 - Logs Vercel** :

@@ -40,7 +40,7 @@ export default function MentionsLegalesPage() {
               <p className="text-gray-700">
                 <strong>Nom du site :</strong> VD-Subside<br />
                 <strong>URL :</strong> <a href="https://vd-subside.ch" className="text-green-600">https://vd-subside.ch</a><br />
-                <strong>Email de contact :</strong> <a href="mailto:contact@vd-subside.ch" className="text-green-600">contact@vd-subside.ch</a><br />
+                <strong>Email de contact :</strong> <a href="mailto:info@vd-subside.ch" className="text-green-600">info@vd-subside.ch</a><br />
                 <strong>Hébergeur :</strong> Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789, USA
               </p>
             </section>
@@ -186,7 +186,7 @@ export default function MentionsLegalesPage() {
                 <li><strong>Droit à la portabilité</strong> : Récupérer vos données</li>
               </ul>
               <p className="text-gray-700 mt-3">
-                Pour exercer ces droits : <a href="mailto:contact@vd-subside.ch" className="text-green-600 underline">contact@vd-subside.ch</a>
+                Pour exercer ces droits : <a href="mailto:info@vd-subside.ch" className="text-green-600 underline">info@vd-subside.ch</a>
               </p>
             </section>
 
@@ -228,7 +228,7 @@ export default function MentionsLegalesPage() {
               <h2 className="text-2xl font-bold text-gray-900 mb-4">8. Contact</h2>
               <p className="text-gray-700">
                 Pour toute question concernant ces mentions légales ou vos données personnelles :<br />
-                <a href="mailto:contact@vd-subside.ch" className="text-green-600 underline font-semibold">contact@vd-subside.ch</a>
+                <a href="mailto:info@vd-subside.ch" className="text-green-600 underline font-semibold">info@vd-subside.ch</a>
               </p>
             </section>
 

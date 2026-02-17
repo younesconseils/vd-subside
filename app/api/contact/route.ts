@@ -28,7 +28,7 @@ export async function POST(request: Request) {
     try {
       await resend.emails.send({
         from: 'VD-Subside <noreply@vd-subside.ch>',
-        to: ['contact@vd-subside.ch'],
+        to: ['info@vd-subside.ch'],
         subject: `🆕 Nouvelle demande de subside - ${data.nom} ${data.prenom}`,
         html: `
           <!DOCTYPE html>
