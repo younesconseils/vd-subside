@@ -8,6 +8,7 @@ import WhatIsSubside from '@/components/WhatIsSubside';
 import Eligibility from '@/components/Eligibility';
 import Benefits from '@/components/Benefits';
 import HowItWorks from '@/components/HowItWorks';
+import SituationsSection from '@/components/SituationsSection';
 import Cities from '@/components/Cities';
 import FAQ from '@/components/FAQ';
 import CTA from '@/components/CTA';
@@ -187,6 +188,9 @@ export default function Home() {
 
       {/* CTA 2 - Après témoignages */}
       <InlineCTA />
+
+      {/* Section Situations */}
+      <SituationsSection />
 
       {/* Villes du canton de Vaud */}
       <Cities />
