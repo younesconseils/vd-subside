@@ -15,7 +15,7 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
+        isScrolled || isMobileMenuOpen
           ? 'bg-white/95 backdrop-blur-lg shadow-sm border-b border-gray-100'
           : 'bg-transparent'
       }`}
@@ -38,11 +38,11 @@ export default function Navbar() {
               </div>
             </div>
 
-            <div>
-              <div className="font-bold text-gray-900 text-lg tracking-tight">
+            <div className={isScrolled || isMobileMenuOpen ? '' : 'text-white'}>
+              <div className="font-bold text-lg tracking-tight">
                 VD-Subside
               </div>
-              <div className="text-xs text-gray-500 -mt-0.5">
+              <div className="text-xs -mt-0.5 opacity-80">
                 Canton de Vaud
               </div>
             </div>
@@ -83,8 +83,9 @@ export default function Navbar() {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 text-gray-600 hover:text-gray-900"
+            className="md:hidden p-3 bg-white text-gray-900 hover:bg-gray-100 rounded-lg shadow-lg border-2 border-gray-200 relative z-50"
             aria-label="Menu"
+            type="button"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               {isMobileMenuOpen ? (
@@ -98,7 +99,7 @@ export default function Navbar() {
 
         {/* Mobile menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-gray-200">
+          <div className="md:hidden py-4 border-t border-gray-200 bg-white">
             <div className="flex flex-col gap-4">
               <a
                 href="/situation"
