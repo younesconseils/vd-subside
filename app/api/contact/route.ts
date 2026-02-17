@@ -1,4 +1,7 @@
 import { NextResponse } from 'next/server';
+import { Resend } from 'resend';
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: Request) {
   try {
@@ -21,13 +24,109 @@ export async function POST(request: Request) {
       );
     }
 
-    // TODO: Intégration avec votre système
-    // Options possibles:
-    // 1. Envoyer email via SendGrid, Resend, Postmark
-    // 2. Sauvegarder dans base de données (Supabase, MongoDB, etc.)
-    // 3. Envoyer à CRM (HubSpot, Salesforce, etc.)
-    // 4. Webhook vers n8n, Zapier, Make
+    // Envoyer l'email de notification
+    try {
+      await resend.emails.send({
+        from: 'VD-Subside <noreply@vd-subside.ch>',
+        to: ['contact@vd-subside.ch'],
+        subject: `🆕 Nouvelle demande de subside - ${data.nom} ${data.prenom}`,
+        html: `
+          <!DOCTYPE html>
+          <html>
+            <head>
+              <style>
+                body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+                .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+                .header { background: linear-gradient(135deg, #16a34a 0%, #059669 100%); color: white; padding: 30px; border-radius: 10px 10px 0 0; }
+                .content { background: #f9fafb; padding: 30px; border-radius: 0 0 10px 10px; }
+                .info-row { background: white; padding: 15px; margin: 10px 0; border-radius: 8px; border-left: 4px solid #16a34a; }
+                .label { font-weight: bold; color: #16a34a; display: inline-block; width: 140px; }
+                .value { color: #333; }
+                .footer { text-align: center; margin-top: 30px; color: #6b7280; font-size: 14px; }
+                .urgent { background: #fef3c7; border-left-color: #f59e0b; }
+              </style>
+            </head>
+            <body>
+              <div class="container">
+                <div class="header">
+                  <h1 style="margin: 0; font-size: 24px;">🆕 Nouvelle demande de subside</h1>
+                  <p style="margin: 10px 0 0 0; opacity: 0.9;">Reçue le ${new Date().toLocaleString('fr-CH')}</p>
+                </div>
 
+                <div class="content">
+                  <div class="info-row urgent">
+                    <span class="label">⚡ À contacter :</span>
+                    <span class="value">Dans les 24 heures</span>
+                  </div>
+
+                  <div class="info-row">
+                    <span class="label">👤 Nom :</span>
+                    <span class="value">${data.nom} ${data.prenom}</span>
+                  </div>
+
+                  <div class="info-row">
+                    <span class="label">📧 Email :</span>
+                    <span class="value"><a href="mailto:${data.email}" style="color: #16a34a;">${data.email}</a></span>
+                  </div>
+
+                  <div class="info-row">
+                    <span class="label">📱 Téléphone :</span>
+                    <span class="value"><a href="tel:${data.telephone}" style="color: #16a34a;">${data.telephone}</a></span>
+                  </div>
+
+                  ${data.ville ? `
+                  <div class="info-row">
+                    <span class="label">📍 Ville :</span>
+                    <span class="value">${data.ville}</span>
+                  </div>
+                  ` : ''}
+
+                  ${data.situation ? `
+                  <div class="info-row">
+                    <span class="label">👥 Situation :</span>
+                    <span class="value">${data.situation}</span>
+                  </div>
+                  ` : ''}
+
+                  ${data.revenu ? `
+                  <div class="info-row">
+                    <span class="label">💰 Revenu :</span>
+                    <span class="value">${data.revenu}</span>
+                  </div>
+                  ` : ''}
+
+                  ${data.message ? `
+                  <div class="info-row">
+                    <span class="label">💬 Message :</span>
+                    <div class="value" style="margin-top: 10px; white-space: pre-wrap;">${data.message}</div>
+                  </div>
+                  ` : ''}
+
+                  <div class="info-row">
+                    <span class="label">🔗 Source :</span>
+                    <span class="value">${data.source || 'Non spécifiée'}</span>
+                  </div>
+
+                  <div class="footer">
+                    <p>Cette demande a été reçue via le formulaire de contact de vd-subside.ch</p>
+                    <p style="margin-top: 10px;">
+                      <a href="https://vd-subside.ch" style="color: #16a34a; text-decoration: none;">🌐 Accéder au site</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </body>
+          </html>
+        `,
+      });
+
+      console.log('✅ Email envoyé avec succès pour:', data.email);
+    } catch (emailError) {
+      console.error('❌ Erreur envoi email:', emailError);
+      // On continue même si l'email échoue pour ne pas bloquer l'utilisateur
+    }
+
+    // Log pour backup
     console.log('📨 Nouvelle demande de subside reçue:', {
       nom: data.nom,
       prenom: data.prenom,
@@ -40,23 +139,6 @@ export async function POST(request: Request) {
       source: data.source,
       timestamp: new Date().toISOString(),
     });
-
-    // Exemple: Envoyer email via service
-    // await sendEmail({
-    //   to: 'contact@vd-subside.ch',
-    //   subject: `Nouvelle demande de subside - ${data.nom} ${data.prenom}`,
-    //   html: `
-    //     <h2>Nouvelle demande de subside</h2>
-    //     <p><strong>Nom:</strong> ${data.nom} ${data.prenom}</p>
-    //     <p><strong>Email:</strong> ${data.email}</p>
-    //     <p><strong>Téléphone:</strong> ${data.telephone}</p>
-    //     <p><strong>Ville:</strong> ${data.ville}</p>
-    //     <p><strong>Situation:</strong> ${data.situation}</p>
-    //     <p><strong>Revenu:</strong> ${data.revenu}</p>
-    //     <p><strong>Message:</strong> ${data.message}</p>
-    //     <p><strong>Source:</strong> ${data.source}</p>
-    //   `,
-    // });
 
     // Réponse de succès
     return NextResponse.json(
