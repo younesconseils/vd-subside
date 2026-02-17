@@ -127,10 +127,10 @@ export default async function CityPage({ params }: Props) {
               Économisez jusqu'à 7'500 CHF par an sur vos primes.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Link href="#demande" className="btn-primary bg-white text-green-600 hover:bg-green-50 font-semibold">
+              <Link href="#demande" className="btn-primary bg-white text-green-600 hover:bg-green-50 font-semibold shadow-xl">
                 Faire ma demande
               </Link>
-              <Link href="#info" className="btn-secondary border-2 border-white text-white hover:bg-white/10 font-semibold">
+              <Link href="#info" className="bg-white/20 backdrop-blur-sm border-2 border-white text-white font-bold py-4 px-10 rounded-xl hover:bg-white/30 transition-all duration-300 shadow-lg">
                 En savoir plus
               </Link>
             </div>
