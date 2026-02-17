@@ -18,6 +18,7 @@
 - **Framework**: Next.js 15 (App Router)
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS
+- **Email**: Resend (notifications de leads)
 - **Déploiement**: Vercel (optimisé)
 
 ## 📦 Installation
