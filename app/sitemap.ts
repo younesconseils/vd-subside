@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next';
+import { guides } from '@/data/guides';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://vd-subside.ch';
@@ -34,6 +35,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const situationPages = situations.map(situation => ({
     url: `${baseUrl}/situation/${situation}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly' as const,
+    priority: 0.85,
+  }));
+
+  // Pages guides longue traîne SEO
+  const guidePages = guides.map(guide => ({
+    url: `${baseUrl}/guide/${guide.slug}`,
     lastModified: new Date(),
     changeFrequency: 'weekly' as const,
     priority: 0.85,
@@ -76,6 +85,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.3,
     },
+    {
+      url: `${baseUrl}/guide`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    },
+    ...guidePages,
     ...situationPages,
     ...cityPages,
   ];
