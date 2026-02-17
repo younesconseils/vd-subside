@@ -87,7 +87,7 @@ export default function Hero() {
                 </svg>
               </a>
               <a
-                href="#eligibilite"
+                href="/en-savoir-plus"
                 className="inline-flex items-center gap-2 border-2 border-gray-200 hover:border-green-600 text-gray-700 hover:text-green-600 px-8 py-4 rounded-xl font-medium transition-all"
               >
                 En savoir plus
