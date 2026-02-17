@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import Calculator from '@/components/Calculator';
+import ContactForm from '@/components/ContactForm';
 import Link from 'next/link';
 
 type Props = {
@@ -127,10 +127,10 @@ export default async function CityPage({ params }: Props) {
               Économisez jusqu'à 7'500 CHF par an sur vos primes.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Link href="#calculateur" className="btn-primary bg-white text-green-600 hover:bg-green-50">
-                Calculer mon subside
+              <Link href="#demande" className="btn-primary bg-white text-green-600 hover:bg-green-50 font-semibold">
+                Faire ma demande
               </Link>
-              <Link href="#info" className="btn-secondary border-white text-white hover:bg-white/10">
+              <Link href="#info" className="btn-secondary border-2 border-white text-white hover:bg-white/10 font-semibold">
                 En savoir plus
               </Link>
             </div>
@@ -164,10 +164,21 @@ export default async function CityPage({ params }: Props) {
         </div>
       </section>
 
-      {/* Calculator */}
-      <div id="calculateur">
-        <Calculator />
-      </div>
+      {/* Formulaire de demande */}
+      <section id="demande" className="section-padding bg-white">
+        <div className="container-custom max-w-4xl">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Faites votre demande de subside à {city.name}
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Remplissez le formulaire ci-dessous. Notre équipe vous contactera par téléphone dans les 24 heures
+              pour vous accompagner dans votre demande de subside.
+            </p>
+          </div>
+          <ContactForm source={`ville-${slug}`} />
+        </div>
+      </section>
 
       {/* Info section */}
       <section id="info" className="section-padding bg-gray-50">
@@ -231,8 +242,8 @@ export default async function CityPage({ params }: Props) {
           </div>
 
           <div className="mt-12 text-center">
-            <Link href="/calculateur" className="btn-primary inline-block">
-              Calculer mon subside maintenant
+            <Link href="#demande" className="btn-primary inline-block font-semibold">
+              Faire ma demande maintenant
             </Link>
           </div>
         </div>
@@ -247,7 +258,7 @@ export default async function CityPage({ params }: Props) {
           <p className="text-xl text-green-50 mb-8 max-w-2xl mx-auto">
             Des milliers d'habitants de {city.name} économisent déjà sur leurs primes d'assurance maladie
           </p>
-          <Link href="/demande" className="btn-primary bg-white text-green-600 hover:bg-green-50">
+          <Link href="#demande" className="btn-primary bg-white text-green-600 hover:bg-green-50 font-semibold shadow-lg">
             Faire ma demande
           </Link>
         </div>
