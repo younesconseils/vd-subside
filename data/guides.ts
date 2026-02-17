@@ -79,7 +79,7 @@ export const guides: Guide[] = [
       },
       {
         question: 'Que faire si ma demande est refusée ?',
-        reponse: 'Vous recevrez une décision motivée par courrier. Vous pouvez faire recours dans les 30 jours auprès du Tribunal cantonal. En cas de changement de situation, vous pouvez aussi déposer une nouvelle demande.',
+        reponse: 'Vous recevrez une décision motivée par courrier. Contactez l\'OVAM au 021 557 45 45 pour comprendre le motif du refus. Vous pouvez ensuite déposer une nouvelle demande avec un dossier corrigé ou actualisé.',
       },
     ],
     cta: 'Besoin d\'aide pour votre demande ? Contactez-nous',
@@ -264,45 +264,75 @@ export const guides: Guide[] = [
   },
   {
     slug: 'recours-refus-subside-vaud',
-    metaTitle: 'Recours Refus Subside Vaud | Que Faire si ma Demande est Refusée ?',
-    metaDescription: 'Votre demande de subside assurance maladie dans le Canton de Vaud a été refusée ? Découvrez les motifs de refus et comment faire recours.',
-    h1: 'Demande de Subside Refusée : Que Faire et Comment Faire Recours ?',
-    icon: '⚖️',
-    intro: 'Si votre demande de subside a été refusée par l\'OVAM, ne paniquez pas. Vous disposez d\'un droit de recours. Comprenez d\'abord les motifs de refus, puis suivez la procédure adaptée.',
+    metaTitle: 'Subside Vaud Refusé : Que Faire ? Solutions et Étapes Pratiques',
+    metaDescription: 'Votre demande de subside assurance maladie dans le Canton de Vaud a été refusée ? Découvrez les motifs de refus, les solutions concrètes et comment refaire une demande.',
+    h1: 'Demande de Subside Refusée : Que Faire ? Les Solutions Concrètes',
+    icon: '🔄',
+    intro: 'Si votre demande de subside a été refusée par l\'OVAM, ne paniquez pas. Il existe plusieurs solutions pratiques pour obtenir votre subside. Comprenez d\'abord les motifs de refus, puis suivez nos conseils pour régulariser votre situation.',
     sections: [
       {
         title: 'Motifs fréquents de refus',
-        content: 'L\'OVAM peut refuser votre demande dans plusieurs cas :',
+        content: 'L\'OVAM peut refuser votre demande dans plusieurs cas. Comprendre le motif est la première étape pour trouver une solution :',
         liste: [
-          '**Revenu déterminant trop élevé** : votre RDU dépasse les plafonds d\'éligibilité',
-          '**Fortune excédentaire** : votre fortune dépasse les seuils (59\'000 CHF seul, 118\'000 CHF couple)',
-          '**Non-résidence** : vous n\'habitez pas dans le Canton de Vaud',
+          '**Revenu déterminant trop élevé** : votre RDU dépasse les plafonds d\'éligibilité. Vérifiez si tous vos frais déductibles ont bien été pris en compte',
+          '**Fortune excédentaire** : votre fortune dépasse les seuils (59\'000 CHF seul, 118\'000 CHF couple). Certains éléments peuvent être déduits',
+          '**Non-résidence** : vous n\'habitez pas dans le Canton de Vaud au moment de la demande',
           '**Capacité de gain non exploitée** : l\'OVAM estime que vous ne mettez pas toute votre capacité de gain à contribution',
-          '**Cession de biens** : vous avez cédé des biens sans contrepartie',
-          '**Renonciation volontaire** à d\'autres prestations sociales',
+          '**Cession de biens** : vous avez cédé des biens sans contrepartie équivalente',
+          '**Dossier incomplet** : il manque des documents ou justificatifs dans votre demande',
         ],
       },
       {
-        title: 'Procédure de recours',
-        content: 'Vous recevez une décision motivée par courrier. Vous pouvez faire recours dans un **délai de 30 jours** auprès du Tribunal cantonal. Le recours doit être écrit et motivé, expliquant pourquoi vous contestez la décision. Il est recommandé de consulter un service juridique gratuit (comme le Centre Social Protestant) pour vous aider.',
+        title: 'Contacter l\'OVAM pour comprendre le refus',
+        content: 'La première chose à faire est de **contacter l\'OVAM directement** pour bien comprendre le motif exact du refus. L\'OVAM est joignable par téléphone au **021 557 45 45** du lundi au vendredi de 8h à 12h et de 13h à 16h30. Les conseillers peuvent vous expliquer clairement pourquoi votre demande a été refusée et vous indiquer les pièces manquantes ou les erreurs à corriger. Cette étape est gratuite et souvent suffisante pour débloquer la situation.',
       },
       {
-        title: 'Alternative : déposer une nouvelle demande',
-        content: 'Si votre situation a changé depuis le refus (baisse de revenus, changement familial), il est souvent plus simple de déposer une nouvelle demande avec vos justificatifs actualisés plutôt que de faire recours sur l\'ancienne décision.',
+        title: 'Déposer une nouvelle demande corrigée',
+        content: 'Si votre situation a évolué ou si le refus est lié à un dossier incomplet, la solution la plus simple est de **déposer une nouvelle demande**. Vous pouvez refaire une demande à tout moment avec des documents actualisés. Assurez-vous d\'inclure tous les justificatifs nécessaires : dernière taxation fiscale, attestation de salaire actuelle, preuves de charges déductibles (pension alimentaire, frais de garde, etc.). Si votre revenu a baissé récemment (perte d\'emploi, réduction d\'activité), joignez une **demande d\'actualisation financière** pour que l\'OVAM prenne en compte votre revenu actuel plutôt que celui de la dernière taxation.',
+      },
+      {
+        title: 'Se faire accompagner gratuitement',
+        content: 'Vous n\'êtes pas seul dans cette démarche. Plusieurs organismes dans le Canton de Vaud proposent un **accompagnement gratuit** pour vous aider à constituer un dossier solide :',
+        liste: [
+          '**Centre Social Protestant (CSP)** : accompagnement social gratuit, aide à remplir les formulaires',
+          '**Caritas Vaud** : permanences sociales gratuites dans plusieurs villes du canton',
+          '**OVAM directement** : les conseillers peuvent vous guider par téléphone ou sur rendez-vous',
+          '**Communes et services sociaux** : votre commune peut vous orienter et vous aider dans vos démarches',
+          '**VD-Subside** : notre équipe vous accompagne gratuitement pour refaire votre demande avec un dossier complet',
+        ],
+      },
+      {
+        title: 'Vérifier et optimiser votre dossier',
+        content: 'Pour maximiser vos chances lors d\'une nouvelle demande, vérifiez ces points importants :',
+        liste: [
+          '**Déductions oubliées** : pension alimentaire versée, frais de garde, cotisations AVS/AI, frais de formation',
+          '**Revenus actualisés** : si vos revenus ont baissé depuis la dernière taxation, demandez une actualisation',
+          '**Situation familiale** : un changement (naissance, séparation, mariage) peut modifier votre éligibilité',
+          '**Documents complets** : assurez-vous que tous les justificatifs demandés sont bien joints au dossier',
+          '**Adresse à jour** : vérifiez que votre domicile est bien enregistré dans le Canton de Vaud',
+        ],
       },
     ],
     faq: [
       {
-        question: 'Le recours est-il gratuit ?',
-        reponse: 'Le recours auprès du Tribunal cantonal est gratuit en matière d\'assurances sociales. Vous n\'avez pas besoin d\'avocat, mais c\'est recommandé pour les cas complexes.',
+        question: 'Puis-je refaire une demande après un refus ?',
+        reponse: 'Oui, absolument. Vous pouvez déposer une nouvelle demande de subside à tout moment, notamment si votre situation financière ou familiale a changé. Assurez-vous de fournir des documents à jour et un dossier complet.',
       },
       {
-        question: 'Puis-je continuer à recevoir mon subside pendant le recours ?',
-        reponse: 'Non, le subside est suspendu durant la procédure de recours, sauf si le tribunal ordonne un effet suspensif. En cas de gain du recours, le subside est versé rétroactivement.',
+        question: 'Combien de temps faut-il attendre pour refaire une demande ?',
+        reponse: 'Il n\'y a pas de délai d\'attente obligatoire. Vous pouvez refaire une demande dès que vous avez réuni les documents nécessaires ou que votre situation a évolué (baisse de revenu, changement familial, etc.).',
+      },
+      {
+        question: 'Comment savoir exactement pourquoi ma demande a été refusée ?',
+        reponse: 'Le courrier de refus de l\'OVAM contient le motif précis. Si ce n\'est pas clair, contactez l\'OVAM au 021 557 45 45 pour obtenir des explications détaillées. C\'est gratuit et les conseillers sont là pour vous aider.',
+      },
+      {
+        question: 'L\'accompagnement pour refaire ma demande est-il vraiment gratuit ?',
+        reponse: 'Oui, que ce soit via notre service, le Centre Social Protestant, Caritas Vaud ou directement l\'OVAM, l\'accompagnement est entièrement gratuit. Vous n\'avez rien à payer.',
       },
     ],
-    cta: 'Votre demande a été refusée ? Nous pouvons vous aider',
-    relatedSlugs: ['comment-faire-demande-subside-vaud', 'actualisation-financiere-subside-vaud'],
+    cta: 'Votre demande a été refusée ? Nous vous aidons gratuitement à refaire votre dossier',
+    relatedSlugs: ['comment-faire-demande-subside-vaud', 'actualisation-financiere-subside-vaud', 'documents-necessaires-subside-vaud'],
   },
 
   // ─────────────────────────────────────────────
@@ -1090,8 +1120,8 @@ export const guides: Guide[] = [
         ],
       },
       {
-        title: 'Comment contester',
-        content: 'Si vous estimez que la demande de remboursement est injustifiée, vous disposez d\'un **délai de 30 jours** pour faire recours. Réunissez vos justificatifs et contactez un service d\'aide juridique gratuit pour vous accompagner.',
+        title: 'Comment réagir',
+        content: 'Si vous estimez que la demande de remboursement est injustifiée, **contactez immédiatement l\'OVAM** au 021 557 45 45 pour comprendre le détail du calcul. Réunissez vos justificatifs (anciennes attestations de salaire, changement de situation) et demandez une révision du dossier. Vous pouvez aussi vous faire accompagner gratuitement par le Centre Social Protestant ou Caritas Vaud.',
       },
       {
         title: 'Facilités de paiement',
