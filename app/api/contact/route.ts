@@ -4,8 +4,8 @@ export async function POST(request: Request) {
   try {
     const data = await request.json();
 
-    // Validation basique (téléphone n'est plus requis)
-    if (!data.nom || !data.prenom || !data.email) {
+    // Validation basique
+    if (!data.nom || !data.prenom || !data.email || !data.telephone) {
       return NextResponse.json(
         { error: 'Champs obligatoires manquants' },
         { status: 400 }

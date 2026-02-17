@@ -179,12 +179,13 @@ export default function ContactForm({ source = 'homepage', inline = false }: Con
         </div>
         <div>
           <label htmlFor="telephone" className="block text-sm font-medium text-gray-700 mb-2">
-            Téléphone (optionnel)
+            Téléphone *
           </label>
           <input
             type="tel"
             id="telephone"
             name="telephone"
+            required
             value={formData.telephone}
             onChange={handleChange}
             className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-green-600 focus:ring-2 focus:ring-green-600/20 outline-none transition-all"
