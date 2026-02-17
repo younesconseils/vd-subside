@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://vd-subside.ch';
-  
+
   // Top 30 villes vaudoises par population - SEO local complet
   const cities = [
     // Grandes villes (>10k habitants) - Priorité maximale
@@ -19,11 +19,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'penthalaz', 'bex'
   ];
 
+  // Pages de situations spécifiques
+  const situations = [
+    'etudiant', 'chomage', 'retraite', 'independant',
+    'famille-monoparentale', 'couple-marie', 'nouveau-resident', 'apprenti'
+  ];
+
   const cityPages = cities.map(city => ({
     url: `${baseUrl}/ville/${city}`,
     lastModified: new Date(),
     changeFrequency: 'weekly' as const,
     priority: 0.8,
+  }));
+
+  const situationPages = situations.map(situation => ({
+    url: `${baseUrl}/situation/${situation}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly' as const,
+    priority: 0.85,
   }));
 
   return [
@@ -40,23 +53,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/eligibilite`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
-    {
       url: `${baseUrl}/demande`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/en-savoir-plus`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/communes`,
+      url: `${baseUrl}/situation`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
-      priority: 0.8,
+      priority: 0.85,
     },
+    {
+      url: `${baseUrl}/mentions-legales`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.3,
+    },
+    ...situationPages,
     ...cityPages,
   ];
 }
