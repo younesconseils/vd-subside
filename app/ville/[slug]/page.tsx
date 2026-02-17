@@ -45,7 +45,8 @@ const cityData: { [key: string]: { name: string; population: string; canton: str
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const city = cityData[params.slug];
+  const { slug } = await Promise.resolve(params);
+  const city = cityData[slug];
   if (!city) {
     return { title: 'Ville non trouvée' };
   }
@@ -87,13 +88,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: 'website',
     },
     alternates: {
-      canonical: `https://vd-subside.ch/ville/${params.slug}`,
+      canonical: `https://vd-subside.ch/ville/${slug}`,
     },
   };
 }
 
-export default function CityPage({ params }: Props) {
-  const city = cityData[params.slug];
+export default async function CityPage({ params }: Props) {
+  const { slug } = await Promise.resolve(params);
+  const city = cityData[slug];
 
   if (!city) {
     return (
