@@ -129,11 +129,11 @@ export default async function CityPage({ params }: Props) {
               Habitants de {city.name} : calculez gratuitement votre droit au subside d'assurance maladie. 
               Économisez jusqu'à 7'500 CHF par an sur vos primes.
             </p>
-            <div className="flex flex-wrap gap-4">
-              <Link href="#demande" className="btn-primary bg-white text-green-600 hover:bg-green-50 font-semibold shadow-xl">
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link href="#demande" className="btn-primary bg-white text-green-600 hover:bg-green-50 font-bold shadow-xl inline-block text-center">
                 Faire ma demande
               </Link>
-              <Link href="#info" className="bg-white/20 backdrop-blur-sm border-2 border-white text-white font-bold py-4 px-10 rounded-xl hover:bg-white/30 transition-all duration-300 shadow-lg">
+              <Link href="#info" className="bg-white text-green-600 border-2 border-white font-bold py-4 px-10 rounded-xl hover:bg-green-50 transition-all duration-300 shadow-lg inline-block text-center">
                 En savoir plus
               </Link>
             </div>
