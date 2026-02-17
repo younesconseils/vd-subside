@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Calculator from '@/components/Calculator';
-import Navbar from '@/components/Navbar';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Calculateur de Subside Assurance Maladie Vaud | Calcul Gratuit',
@@ -10,9 +10,20 @@ export const metadata: Metadata = {
 
 export default function CalculateurPage() {
   return (
-    <>
-      <Navbar />
-      <main className="min-h-screen bg-gray-50 pt-20">
+    <main className="min-h-screen bg-gray-50">
+      {/* Bouton retour accueil */}
+      <div className="fixed top-6 left-6 z-50">
+        <Link
+          href="/"
+          className="bg-white text-green-600 font-bold py-3 px-6 rounded-lg shadow-lg hover:bg-green-50 transition-all duration-300 hover:shadow-xl inline-flex items-center gap-2"
+        >
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+          </svg>
+          Accueil
+        </Link>
+      </div>
+
       <div className="bg-green-600 text-white py-12">
         <div className="container-custom text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
@@ -97,7 +108,6 @@ export default function CalculateurPage() {
           </div>
         </div>
       </section>
-      </main>
-    </>
+    </main>
   );
 }

@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Navbar from '@/components/Navbar';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
@@ -13,13 +12,21 @@ export const metadata: Metadata = {
 
 export default function MentionsLegalesPage() {
   return (
-    <>
-      <Navbar />
-      <main className="min-h-screen bg-gray-50 pt-32 pb-12">
-      <div className="container-custom max-w-4xl">
-        <Link href="/" className="text-green-600 hover:text-green-700 font-semibold mb-8 inline-block">
-          ← Retour à l'accueil
+    <main className="min-h-screen bg-gray-50 py-12">
+      {/* Bouton retour accueil */}
+      <div className="fixed top-6 left-6 z-50">
+        <Link
+          href="/"
+          className="bg-white text-green-600 font-bold py-3 px-6 rounded-lg shadow-lg hover:bg-green-50 transition-all duration-300 hover:shadow-xl inline-flex items-center gap-2"
+        >
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+          </svg>
+          Accueil
         </Link>
+      </div>
+
+      <div className="container-custom max-w-4xl">
 
         <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-8">Mentions Légales</h1>
@@ -252,7 +259,6 @@ export default function MentionsLegalesPage() {
           </div>
         </div>
       </div>
-      </main>
-    </>
+    </main>
   );
 }
