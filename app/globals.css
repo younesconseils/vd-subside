@@ -16,6 +16,11 @@
     font-family: var(--font-inter);
     background-color: #fafafa;
   }
+
+  /* Offset pour les ancres avec navbar fixe */
+  section[id] {
+    scroll-margin-top: 5rem;
+  }
 }
 
 @layer components {
