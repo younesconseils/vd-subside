@@ -1,7 +1,8 @@
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+// Initialiser Resend seulement si la clé API est présente
+const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null;
 
 export async function POST(request: Request) {
   try {
@@ -24,9 +25,10 @@ export async function POST(request: Request) {
       );
     }
 
-    // Envoyer l'email de notification
-    try {
-      await resend.emails.send({
+    // Envoyer l'email de notification (si Resend est configuré)
+    if (resend) {
+      try {
+        await resend.emails.send({
         from: 'VD-Subside <noreply@vd-subside.ch>',
         to: ['info@vd-subside.ch'],
         subject: `🆕 Nouvelle demande de subside - ${data.nom} ${data.prenom}`,
@@ -120,10 +122,13 @@ export async function POST(request: Request) {
         `,
       });
 
-      console.log('✅ Email envoyé avec succès pour:', data.email);
-    } catch (emailError) {
-      console.error('❌ Erreur envoi email:', emailError);
-      // On continue même si l'email échoue pour ne pas bloquer l'utilisateur
+        console.log('✅ Email envoyé avec succès pour:', data.email);
+      } catch (emailError) {
+        console.error('❌ Erreur envoi email:', emailError);
+        // On continue même si l'email échoue pour ne pas bloquer l'utilisateur
+      }
+    } else {
+      console.warn('⚠️ Resend non configuré - Email non envoyé. Configurez RESEND_API_KEY dans les variables d\'environnement.');
     }
 
     // Log pour backup
