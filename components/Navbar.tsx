@@ -49,9 +49,6 @@ export default function Navbar() {
 
           {/* Navigation links */}
           <div className="hidden md:flex items-center gap-8">
-            <a href="#avantages" className="text-sm font-medium text-gray-600 hover:text-green-600 transition-colors">
-              Avantages
-            </a>
             <a href="#eligibilite" className="text-sm font-medium text-gray-600 hover:text-green-600 transition-colors">
               Éligibilité
             </a>
