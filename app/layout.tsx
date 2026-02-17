@@ -16,19 +16,70 @@ export const metadata: Metadata = {
   },
   description: 'Obtenez votre subside d\'assurance maladie dans le Canton de Vaud. Accompagnement gratuit, réponse sous 24h, 85% de demandes acceptées. Économisez jusqu\'à 8\'400 CHF/an. Service 100% sécurisé.',
   keywords: [
+    // Mots-clés principaux - Ciblage direct concurrent
+    'subside vaud',
+    'vd subside',
     'subside assurance maladie vaud',
-    'subside lamal vaud 2025',
-    'aide assurance maladie canton vaud',
+    'subside lamal vaud',
+    'subside vd',
+
+    // Variations 2025
+    'subside vaud 2025',
+    'subside assurance maladie vaud 2025',
+    'subside lamal 2025 vaud',
+    'barème subside vaud 2025',
+
+    // Mots-clés longue traîne - Intention forte
+    'demande subside vaud',
+    'demande subside assurance maladie vaud',
+    'faire demande subside vaud',
     'demande subside vaud en ligne',
-    'réduction primes assurance maladie vaud',
-    'subsides assurance maladie 2025',
-    'OVAM subside',
-    'revenu déterminant unifié RDU',
-    'éligibilité subside vaud',
-    'économiser assurance maladie vaud',
-    'accompagnement subside gratuit',
     'formulaire subside vaud',
-    'caisse maladie subside canton vaud',
+    'dossier subside vaud',
+
+    // Calculateur - High intent
+    'calculateur subside vaud',
+    'calculer subside vaud',
+    'calcul subside assurance maladie vaud',
+    'simulateur subside vaud',
+    'estimation subside vaud',
+
+    // Éligibilité - Questions fréquentes
+    'éligibilité subside vaud',
+    'ai-je droit subside vaud',
+    'condition subside vaud',
+    'revenu maximum subside vaud',
+    'RDU subside vaud',
+    'revenu déterminant unifié vaud',
+
+    // Termes officiels
+    'OVAM subside',
+    'office vaudois assurance maladie',
+    'aide assurance maladie canton vaud',
+    'réduction prime lamal vaud',
+    'réduction primes assurance maladie vaud',
+
+    // Villes principales (SEO local)
+    'subside lausanne',
+    'subside yverdon',
+    'subside montreux',
+    'subside vevey',
+    'subside nyon',
+    'subside morges',
+
+    // Problématiques ciblées
+    'économiser assurance maladie vaud',
+    'baisser prime assurance vaud',
+    'aide financière assurance maladie',
+    'accompagnement subside gratuit',
+    'aide remplissage formulaire subside',
+
+    // Variations orthographiques
+    'subsidie vaud',
+    'subsides vaud',
+    'subside canton de vaud',
+    'subside canton vaud',
+    'caisse maladie subside vaud',
   ],
   authors: [{ name: 'VD Subside' }],
   creator: 'VD Subside',

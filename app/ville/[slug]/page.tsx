@@ -6,17 +6,42 @@ type Props = {
   params: { slug: string };
 };
 
-const cityData: { [key: string]: { name: string; population: string; canton: string } } = {
-  'lausanne': { name: 'Lausanne', population: '140\'000', canton: 'Vaud' },
-  'yverdon-les-bains': { name: 'Yverdon-les-Bains', population: '30\'000', canton: 'Vaud' },
-  'montreux': { name: 'Montreux', population: '26\'000', canton: 'Vaud' },
-  'renens': { name: 'Renens', population: '21\'000', canton: 'Vaud' },
-  'nyon': { name: 'Nyon', population: '21\'000', canton: 'Vaud' },
-  'vevey': { name: 'Vevey', population: '20\'000', canton: 'Vaud' },
-  'pully': { name: 'Pully', population: '18\'000', canton: 'Vaud' },
-  'morges': { name: 'Morges', population: '16\'000', canton: 'Vaud' },
-  'prilly': { name: 'Prilly', population: '12\'000', canton: 'Vaud' },
-  'ecublens': { name: 'Écublens', population: '13\'000', canton: 'Vaud' },
+const cityData: { [key: string]: { name: string; population: string; canton: string; district: string } } = {
+  // Grandes villes (>10k habitants)
+  'lausanne': { name: 'Lausanne', population: '140\'000', canton: 'Vaud', district: 'Lausanne' },
+  'yverdon-les-bains': { name: 'Yverdon-les-Bains', population: '30\'000', canton: 'Vaud', district: 'Jura-Nord vaudois' },
+  'montreux': { name: 'Montreux', population: '26\'000', canton: 'Vaud', district: 'Riviera-Pays-d\'Enhaut' },
+  'renens': { name: 'Renens', population: '21\'000', canton: 'Vaud', district: 'Ouest lausannois' },
+  'nyon': { name: 'Nyon', population: '21\'000', canton: 'Vaud', district: 'Nyon' },
+  'vevey': { name: 'Vevey', population: '20\'000', canton: 'Vaud', district: 'Riviera-Pays-d\'Enhaut' },
+  'pully': { name: 'Pully', population: '18\'000', canton: 'Vaud', district: 'Lavaux-Oron' },
+  'morges': { name: 'Morges', population: '16\'000', canton: 'Vaud', district: 'Morges' },
+  'prilly': { name: 'Prilly', population: '12\'000', canton: 'Vaud', district: 'Ouest lausannois' },
+  'ecublens': { name: 'Écublens', population: '13\'000', canton: 'Vaud', district: 'Ouest lausannois' },
+
+  // Villes moyennes (5k-10k habitants)
+  'la-tour-de-peilz': { name: 'La Tour-de-Peilz', population: '12\'000', canton: 'Vaud', district: 'Riviera-Pays-d\'Enhaut' },
+  'aigle': { name: 'Aigle', population: '10\'500', canton: 'Vaud', district: 'Aigle' },
+  'gland': { name: 'Gland', population: '13\'500', canton: 'Vaud', district: 'Nyon' },
+  'bussigny': { name: 'Bussigny', population: '8\'500', canton: 'Vaud', district: 'Ouest lausannois' },
+  'crissier': { name: 'Crissier', population: '7\'500', canton: 'Vaud', district: 'Ouest lausannois' },
+  'chavannes-pres-renens': { name: 'Chavannes-près-Renens', population: '7\'000', canton: 'Vaud', district: 'Ouest lausannois' },
+  'villeneuve': { name: 'Villeneuve', population: '5\'500', canton: 'Vaud', district: 'Aigle' },
+  'epalinges': { name: 'Épalinges', population: '9\'500', canton: 'Vaud', district: 'Lausanne' },
+  'lutry': { name: 'Lutry', population: '10\'000', canton: 'Vaud', district: 'Lavaux-Oron' },
+  'payerne': { name: 'Payerne', population: '10\'000', canton: 'Vaud', district: 'Broye-Vully' },
+
+  // Villes importantes (3k-5k habitants)
+  'aubonne': { name: 'Aubonne', population: '3\'400', canton: 'Vaud', district: 'Morges' },
+  'orbe': { name: 'Orbe', population: '7\'000', canton: 'Vaud', district: 'Jura-Nord vaudois' },
+  'saint-prex': { name: 'Saint-Prex', population: '6\'000', canton: 'Vaud', district: 'Morges' },
+  'rolle': { name: 'Rolle', population: '5\'800', canton: 'Vaud', district: 'Nyon' },
+  'moudon': { name: 'Moudon', population: '5\'800', canton: 'Vaud', district: 'Broye-Vully' },
+  'le-mont-sur-lausanne': { name: 'Le Mont-sur-Lausanne', population: '8\'500', canton: 'Vaud', district: 'Lausanne' },
+  'cheseaux-sur-lausanne': { name: 'Cheseaux-sur-Lausanne', population: '5\'000', canton: 'Vaud', district: 'Gros-de-Vaud' },
+  'romanel-sur-lausanne': { name: 'Romanel-sur-Lausanne', population: '5\'000', canton: 'Vaud', district: 'Lausanne' },
+  'penthalaz': { name: 'Penthalaz', population: '3\'000', canton: 'Vaud', district: 'Gros-de-Vaud' },
+  'bex': { name: 'Bex', population: '7\'500', canton: 'Vaud', district: 'Aigle' },
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -26,14 +51,44 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   return {
-    title: `Subside Assurance Maladie ${city.name} | Calculateur Gratuit`,
-    description: `Calculez votre subside d'assurance maladie à ${city.name}. Guide complet, montants 2024, conditions d'éligibilité et démarches pour les habitants de ${city.name}.`,
+    metadataBase: new URL('https://vd-subside.ch'),
+    title: `Subside Assurance Maladie ${city.name} 2025 | VD-Subside`,
+    description: `Subside assurance maladie à ${city.name} : calculateur gratuit, accompagnement, conditions 2025. Habitants de ${city.name}, économisez jusqu'à 8'400 CHF/an. Réponse sous 24h.`,
     keywords: [
+      // Mots-clés locaux principaux
+      `subside ${city.name.toLowerCase()}`,
       `subside assurance maladie ${city.name.toLowerCase()}`,
-      `aide assurance ${city.name.toLowerCase()}`,
+      `subside vaud ${city.name.toLowerCase()}`,
       `subside lamal ${city.name.toLowerCase()}`,
+
+      // Longue traîne locale
+      `demande subside ${city.name.toLowerCase()}`,
+      `calculateur subside ${city.name.toLowerCase()}`,
+      `aide assurance ${city.name.toLowerCase()}`,
       `réduction prime ${city.name.toLowerCase()}`,
+      `économiser assurance maladie ${city.name.toLowerCase()}`,
+
+      // District
+      `subside ${city.district.toLowerCase()}`,
+      `aide assurance ${city.district.toLowerCase()}`,
+
+      // Questions locales
+      `comment obtenir subside ${city.name.toLowerCase()}`,
+      `ai-je droit subside ${city.name.toLowerCase()}`,
+      `montant subside ${city.name.toLowerCase()}`,
+      `formulaire subside ${city.name.toLowerCase()}`,
     ],
+    openGraph: {
+      title: `Subside Assurance Maladie ${city.name} 2025`,
+      description: `Calculateur gratuit et accompagnement pour obtenir votre subside à ${city.name}. Réponse sous 24h.`,
+      url: `https://vd-subside.ch/ville/${params.slug}`,
+      siteName: 'VD-Subside',
+      locale: 'fr_CH',
+      type: 'website',
+    },
+    alternates: {
+      canonical: `https://vd-subside.ch/ville/${params.slug}`,
+    },
   };
 }
 
@@ -56,7 +111,7 @@ export default function CityPage({ params }: Props) {
   return (
     <main className="min-h-screen">
       {/* Hero */}
-      <div className="bg-gradient-to-br from-blue-600 to-blue-500 text-white py-16">
+      <div className="bg-gradient-to-br from-green-600 to-emerald-600 text-white py-16">
         <div className="container-custom">
           <div className="max-w-4xl">
             <div className="inline-block bg-white/20 px-4 py-2 rounded-full text-sm mb-4">
@@ -65,12 +120,12 @@ export default function CityPage({ params }: Props) {
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
               Subside d'assurance maladie à {city.name}
             </h1>
-            <p className="text-xl text-blue-50 mb-6">
+            <p className="text-xl text-green-50 mb-6">
               Habitants de {city.name} : calculez gratuitement votre droit au subside d'assurance maladie. 
               Économisez jusqu'à 7'500 CHF par an sur vos primes.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Link href="#calculateur" className="btn-primary bg-white text-blue-600 hover:bg-blue-50">
+              <Link href="#calculateur" className="btn-primary bg-white text-green-600 hover:bg-green-50">
                 Calculer mon subside
               </Link>
               <Link href="#info" className="btn-secondary border-white text-white hover:bg-white/10">
@@ -86,19 +141,19 @@ export default function CityPage({ params }: Props) {
         <div className="container-custom">
           <div className="grid md:grid-cols-3 gap-8 text-center max-w-4xl mx-auto">
             <div className="card">
-              <div className="text-4xl font-bold text-blue-600 mb-2">
+              <div className="text-4xl font-bold text-green-600 mb-2">
                 {city.population}
               </div>
               <div className="text-gray-600">Habitants à {city.name}</div>
             </div>
             <div className="card">
-              <div className="text-4xl font-bold text-blue-600 mb-2">
+              <div className="text-4xl font-bold text-green-600 mb-2">
                 ~30%
               </div>
               <div className="text-gray-600">Éligibles au subside</div>
             </div>
             <div className="card">
-              <div className="text-4xl font-bold text-blue-600 mb-2">
+              <div className="text-4xl font-bold text-green-600 mb-2">
                 3'500 CHF
               </div>
               <div className="text-gray-600">Subside moyen/an</div>
@@ -155,8 +210,8 @@ export default function CityPage({ params }: Props) {
               <li>En se rendant à l'Agence régionale de {city.name}</li>
             </ul>
 
-            <div className="bg-blue-600/10 border-l-4 border-blue-600 p-6 rounded-r-lg my-8">
-              <h4 className="font-bold text-blue-600 mb-2">💡 Conseil pour les habitants de {city.name}</h4>
+            <div className="bg-green-600/10 border-l-4 border-green-600 p-6 rounded-r-lg my-8">
+              <h4 className="font-bold text-green-600 mb-2">💡 Conseil pour les habitants de {city.name}</h4>
               <p className="text-sm text-gray-700">
                 N'attendez pas ! Faites votre demande dès maintenant. Le subside peut être rétroactif 
                 jusqu'au 1er janvier de l'année en cours si vous déposez votre demande avant le 31 décembre.
@@ -182,15 +237,15 @@ export default function CityPage({ params }: Props) {
       </section>
 
       {/* CTA */}
-      <section className="section-padding bg-blue-600 text-white">
+      <section className="section-padding bg-green-600 text-white">
         <div className="container-custom text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Habitants de {city.name}, ne passez pas à côté de votre subside !
           </h2>
-          <p className="text-xl text-blue-50 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-green-50 mb-8 max-w-2xl mx-auto">
             Des milliers d'habitants de {city.name} économisent déjà sur leurs primes d'assurance maladie
           </p>
-          <Link href="/demande" className="btn-primary bg-white text-blue-600 hover:bg-blue-50">
+          <Link href="/demande" className="btn-primary bg-white text-green-600 hover:bg-green-50">
             Faire ma demande
           </Link>
         </div>

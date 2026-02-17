@@ -14,7 +14,7 @@ export default function InlineCTA() {
             </div>
             <div className="flex-shrink-0">
               <a
-                href="#formulaire"
+                href="/demande"
                 className="inline-block bg-green-600 text-white font-semibold py-4 px-8 rounded-md hover:bg-green-700 transition-colors shadow-md"
               >
                 Demande de subside

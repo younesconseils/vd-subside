@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import ContactForm from './ContactForm';
 
 export default function Hero() {
   const [scrollY, setScrollY] = useState(0);
@@ -10,25 +11,6 @@ export default function Hero() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  const [formData, setFormData] = useState({
-    nom: '',
-    prenom: '',
-    email: '',
-    telephone: '',
-    commune: '',
-    npa: '',
-    nombrePersonnes: '1',
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log('Demande envoyée:', formData);
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
 
   return (
     <section className="relative min-h-screen bg-white overflow-hidden pt-20">
@@ -124,120 +106,11 @@ export default function Hero() {
                   Demande de subside
                 </h2>
                 <p className="text-gray-600 text-sm">
-                  Remplissez le formulaire ci-dessous
+                  Remplissez le formulaire ci-dessous. Réponse sous 24h garantie.
                 </p>
               </div>
 
-              <form onSubmit={handleSubmit} className="space-y-5">
-                {/* Nom & Prénom */}
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="group">
-                    <input
-                      type="text"
-                      name="nom"
-                      value={formData.nom}
-                      onChange={handleChange}
-                      placeholder="Nom"
-                      className="w-full px-4 py-3.5 bg-gray-50 border-0 rounded-xl text-gray-900 placeholder-gray-400 focus:bg-white focus:ring-2 focus:ring-green-500 outline-none transition-all"
-                      required
-                    />
-                  </div>
-                  <div className="group">
-                    <input
-                      type="text"
-                      name="prenom"
-                      value={formData.prenom}
-                      onChange={handleChange}
-                      placeholder="Prénom"
-                      className="w-full px-4 py-3.5 bg-gray-50 border-0 rounded-xl text-gray-900 placeholder-gray-400 focus:bg-white focus:ring-2 focus:ring-green-500 outline-none transition-all"
-                      required
-                    />
-                  </div>
-                </div>
-
-                {/* Email */}
-                <div>
-                  <input
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    placeholder="Email"
-                    className="w-full px-4 py-3.5 bg-gray-50 border-0 rounded-xl text-gray-900 placeholder-gray-400 focus:bg-white focus:ring-2 focus:ring-green-500 outline-none transition-all"
-                    required
-                  />
-                </div>
-
-                {/* Téléphone */}
-                <div>
-                  <input
-                    type="tel"
-                    name="telephone"
-                    value={formData.telephone}
-                    onChange={handleChange}
-                    placeholder="Téléphone"
-                    className="w-full px-4 py-3.5 bg-gray-50 border-0 rounded-xl text-gray-900 placeholder-gray-400 focus:bg-white focus:ring-2 focus:ring-green-500 outline-none transition-all"
-                    required
-                  />
-                </div>
-
-                {/* Commune & NPA */}
-                <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <input
-                      type="text"
-                      name="commune"
-                      value={formData.commune}
-                      onChange={handleChange}
-                      placeholder="Commune"
-                      className="w-full px-4 py-3.5 bg-gray-50 border-0 rounded-xl text-gray-900 placeholder-gray-400 focus:bg-white focus:ring-2 focus:ring-green-500 outline-none transition-all"
-                      required
-                    />
-                  </div>
-                  <div>
-                    <input
-                      type="text"
-                      name="npa"
-                      value={formData.npa}
-                      onChange={handleChange}
-                      placeholder="NPA"
-                      className="w-full px-4 py-3.5 bg-gray-50 border-0 rounded-xl text-gray-900 placeholder-gray-400 focus:bg-white focus:ring-2 focus:ring-green-500 outline-none transition-all"
-                      required
-                    />
-                  </div>
-                </div>
-
-                {/* Nombre de personnes */}
-                <div>
-                  <select
-                    name="nombrePersonnes"
-                    value={formData.nombrePersonnes}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3.5 bg-gray-50 border-0 rounded-xl text-gray-900 focus:bg-white focus:ring-2 focus:ring-green-500 outline-none transition-all appearance-none"
-                    required
-                  >
-                    <option value="1">1 personne</option>
-                    <option value="2">2 personnes</option>
-                    <option value="3">3 personnes</option>
-                    <option value="4">4 personnes</option>
-                    <option value="5">5+ personnes</option>
-                  </select>
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full bg-green-600 hover:bg-green-700 text-white font-medium py-4 rounded-xl transition-all shadow-lg shadow-green-600/20 hover:shadow-xl hover:shadow-green-600/30 hover:scale-[1.02]"
-                >
-                  Envoyer ma demande
-                </button>
-
-                <p className="text-xs text-gray-500 text-center flex items-center justify-center gap-2">
-                  <svg className="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd" />
-                  </svg>
-                  Données sécurisées et confidentielles
-                </p>
-              </form>
+              <ContactForm source="hero-homepage" />
             </div>
           </div>
         </div>

@@ -66,7 +66,7 @@ export default function Navbar() {
           {/* CTA Button */}
           <div className="hidden md:block">
             <a
-              href="#form"
+              href="/demande"
               className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-medium px-6 py-2.5 rounded-xl transition-all shadow-lg shadow-green-600/20 hover:shadow-xl hover:shadow-green-600/30"
             >
               Demande de subside
