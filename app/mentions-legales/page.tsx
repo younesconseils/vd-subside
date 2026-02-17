@@ -15,7 +15,7 @@ export default function MentionsLegalesPage() {
   return (
     <>
       <Navbar />
-      <main className="min-h-screen bg-gray-50 py-12">
+      <main className="min-h-screen bg-gray-50 pt-32 pb-12">
       <div className="container-custom max-w-4xl">
         <Link href="/" className="text-green-600 hover:text-green-700 font-semibold mb-8 inline-block">
           ← Retour à l'accueil

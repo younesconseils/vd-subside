@@ -114,7 +114,7 @@ export default async function CityPage({ params }: Props) {
   return (
     <>
       <Navbar />
-      <main className="min-h-screen">
+      <main className="min-h-screen pt-20">
         {/* Hero */}
         <div className="bg-gradient-to-br from-green-600 to-emerald-600 text-white py-16">
         <div className="container-custom">

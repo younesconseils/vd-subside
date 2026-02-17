@@ -19,7 +19,7 @@ export default function DemandePage() {
   return (
     <>
       <Navbar />
-      <main className="min-h-screen bg-gray-50">
+      <main className="min-h-screen bg-gray-50 pt-20">
       {/* Hero */}
       <div className="bg-green-600 text-white py-12">
         <div className="container-custom text-center">
