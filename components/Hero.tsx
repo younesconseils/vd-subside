@@ -78,7 +78,7 @@ export default function Hero() {
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4 pt-4">
               <a
-                href="#form"
+                href="/demande"
                 className="group inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-xl font-medium transition-all shadow-lg shadow-green-600/20 hover:shadow-xl hover:shadow-green-600/30 hover:scale-105"
               >
                 Demande de subside
@@ -87,7 +87,7 @@ export default function Hero() {
                 </svg>
               </a>
               <a
-                href="#info"
+                href="#eligibilite"
                 className="inline-flex items-center gap-2 border-2 border-gray-200 hover:border-green-600 text-gray-700 hover:text-green-600 px-8 py-4 rounded-xl font-medium transition-all"
               >
                 En savoir plus
