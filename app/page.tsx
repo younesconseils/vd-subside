@@ -87,45 +87,6 @@ export default function Home() {
           },
         },
       },
-      // FAQ Page
-      {
-        '@type': 'FAQPage',
-        '@id': 'https://vd-subside.ch/#faq',
-        mainEntity: [
-          {
-            '@type': 'Question',
-            name: 'Qui peut bénéficier d\'un subside d\'assurance maladie dans le Canton de Vaud ?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'Toute personne domiciliée dans le Canton de Vaud dont le revenu déterminant unifié (RDU) ne dépasse pas les limites fixées peut bénéficier d\'un subside. L\'objectif est de limiter la charge des primes à 10% du RDU.',
-            },
-          },
-          {
-            '@type': 'Question',
-            name: 'Comment calculer mon RDU pour le subside vaudois ?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'Le RDU se calcule sur la base de votre revenu net imposable avec des déductions forfaitaires : CHF 2\'200 (1 adulte), CHF 4\'400 (2 adultes), CHF 1\'300 par enfant pour les primes, plus CHF 6\'000 (1er enfant), CHF 13\'000 (2 enfants) pour les enfants à charge. La fortune au-dessus de CHF 59\'000 (personne seule) ou CHF 118\'000 (couple) est prise en compte à hauteur de 6.7%.',
-            },
-          },
-          {
-            '@type': 'Question',
-            name: 'Quel est le montant maximum du subside assurance maladie vaudois ?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'Le montant du subside varie selon votre situation familiale et votre RDU. Les familles peuvent économiser jusqu\'à 8\'400 CHF par an. Le subside est calculé pour que votre charge de prime ne dépasse pas 10% de votre RDU.',
-            },
-          },
-          {
-            '@type': 'Question',
-            name: 'Comment faire ma demande de subside vaudois en ligne ?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'Remplissez le formulaire sur VD-Subside.ch. Notre équipe vous accompagne gratuitement dans votre demande auprès de l\'OVAM (Office Vaudois de l\'Assurance Maladie). Vous recevrez une réponse sous 24h.',
-            },
-          },
-        ],
-      },
       // BreadcrumbList
       {
         '@type': 'BreadcrumbList',

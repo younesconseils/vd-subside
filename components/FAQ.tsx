@@ -64,7 +64,7 @@ export default function FAQ() {
     },
     {
       question: 'Que faire si ma demande est refusée ?',
-      answer: 'Si votre demande est refusée, vous recevrez une décision écrite avec les motifs du refus. Vous avez 30 jours pour faire opposition auprès de l\'OVAM si vous estimez que la décision est injustifiée. Vous pouvez demander une réévaluation en fournissant des documents complémentaires ou des explications sur votre situation. Notre service peut vous accompagner dans cette démarche.'
+      answer: 'Si votre demande est refusée, vous recevrez un courrier avec les motifs du refus. Contactez l\'OVAM au 021 557 45 45 pour comprendre la raison exacte. Vous pouvez ensuite déposer une nouvelle demande avec un dossier corrigé ou des documents actualisés. Notre service vous accompagne gratuitement pour refaire votre demande.'
     },
   ];
 

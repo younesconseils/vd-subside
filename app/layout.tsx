@@ -187,44 +187,6 @@ export default function RootLayout({
                   description: 'Obtenez votre subside d\'assurance maladie dans le Canton de Vaud. Accompagnement gratuit, réponse sous 24h.',
                   inLanguage: 'fr-CH',
                 },
-                {
-                  '@type': 'FAQPage',
-                  '@id': 'https://vd-subside.ch/#faq',
-                  mainEntity: [
-                    {
-                      '@type': 'Question',
-                      name: 'Comment faire une demande de subside dans le Canton de Vaud ?',
-                      acceptedAnswer: {
-                        '@type': 'Answer',
-                        text: 'Remplissez notre formulaire en ligne sur vd-subside.ch. Notre équipe vous contactera sous 24h pour vous accompagner gratuitement dans vos démarches auprès de l\'OVAM.',
-                      },
-                    },
-                    {
-                      '@type': 'Question',
-                      name: 'Qui a droit au subside assurance maladie dans le Canton de Vaud ?',
-                      acceptedAnswer: {
-                        '@type': 'Answer',
-                        text: 'Les résidents du Canton de Vaud dont le revenu déterminant unifié (RDU) ne dépasse pas certains plafonds fixés annuellement. En 2026, une personne seule peut toucher un subside avec un RDU allant jusqu\'à 52\'000 CHF.',
-                      },
-                    },
-                    {
-                      '@type': 'Question',
-                      name: 'Combien peut-on économiser avec un subside assurance maladie vaudois ?',
-                      acceptedAnswer: {
-                        '@type': 'Answer',
-                        text: 'Selon votre situation, vous pouvez économiser jusqu\'à 8\'400 CHF par an sur vos primes d\'assurance maladie. Le montant du subside dépend de votre revenu et de votre situation familiale.',
-                      },
-                    },
-                    {
-                      '@type': 'Question',
-                      name: 'Le service VD Subside est-il gratuit ?',
-                      acceptedAnswer: {
-                        '@type': 'Answer',
-                        text: 'Oui, notre service d\'accompagnement est 100% gratuit. Nous vous aidons à constituer votre dossier et à déposer votre demande auprès de l\'OVAM sans aucun frais.',
-                      },
-                    },
-                  ],
-                },
               ],
             }),
           }}
