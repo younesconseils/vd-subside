@@ -96,3 +96,4 @@ Modifiez `next.config.ts` pour ajuster les optimisations.
 ---
 
 Développé pour dominer le SEO dans le canton de Vaud 🇨🇭
+
