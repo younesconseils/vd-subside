@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import ContactForm from '@/components/ContactForm';
+import Navbar from '@/components/Navbar';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
@@ -16,7 +17,9 @@ export const metadata: Metadata = {
 
 export default function DemandePage() {
   return (
-    <main className="min-h-screen bg-gray-50">
+    <>
+      <Navbar />
+      <main className="min-h-screen bg-gray-50">
       {/* Hero */}
       <div className="bg-green-600 text-white py-12">
         <div className="container-custom text-center">
@@ -134,6 +137,7 @@ export default function DemandePage() {
           </div>
         </div>
       </section>
-    </main>
+      </main>
+    </>
   );
 }

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Calculator from '@/components/Calculator';
+import Navbar from '@/components/Navbar';
 
 export const metadata: Metadata = {
   title: 'Calculateur de Subside Assurance Maladie Vaud | Calcul Gratuit',
@@ -9,7 +10,9 @@ export const metadata: Metadata = {
 
 export default function CalculateurPage() {
   return (
-    <main className="min-h-screen bg-gray-50">
+    <>
+      <Navbar />
+      <main className="min-h-screen bg-gray-50">
       <div className="bg-green-600 text-white py-12">
         <div className="container-custom text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
@@ -94,6 +97,7 @@ export default function CalculateurPage() {
           </div>
         </div>
       </section>
-    </main>
+      </main>
+    </>
   );
 }

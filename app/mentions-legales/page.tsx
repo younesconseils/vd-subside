@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Navbar from '@/components/Navbar';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
@@ -12,7 +13,9 @@ export const metadata: Metadata = {
 
 export default function MentionsLegalesPage() {
   return (
-    <main className="min-h-screen bg-gray-50 py-12">
+    <>
+      <Navbar />
+      <main className="min-h-screen bg-gray-50 py-12">
       <div className="container-custom max-w-4xl">
         <Link href="/" className="text-green-600 hover:text-green-700 font-semibold mb-8 inline-block">
           ← Retour à l'accueil
@@ -249,6 +252,7 @@ export default function MentionsLegalesPage() {
           </div>
         </div>
       </div>
-    </main>
+      </main>
+    </>
   );
 }
