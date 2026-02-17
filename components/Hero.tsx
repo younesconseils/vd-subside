@@ -15,7 +15,7 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen bg-white overflow-hidden pt-20">
       {/* Animated background gradient - Vaud colors */}
-      <div className="absolute inset-0 overflow-hidden">
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div
           className="absolute top-0 right-0 w-[800px] h-[800px] bg-gradient-to-br from-green-50 via-emerald-50 to-transparent rounded-full blur-3xl opacity-60 animate-pulse"
           style={{ transform: `translateY(${scrollY * 0.3}px)` }}
@@ -117,7 +117,7 @@ export default function Hero() {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce pointer-events-none">
         <svg className="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
         </svg>
