@@ -12,15 +12,18 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL('https://vd-subside.ch'),
   title: {
-    default: 'Subside Assurance Maladie Vaud 2026 | VD-Subside - Demande Gratuite & Accompagnement',
+    default: 'Subside Vaud 2026 | Demande de Subside Assurance Maladie Vaud Gratuit',
     template: '%s | VD-Subside'
   },
-  description: 'Obtenez votre subside d\'assurance maladie dans le Canton de Vaud. Accompagnement gratuit, réponse sous 24h, 85% de demandes acceptées. Économisez jusqu\'à 8\'400 CHF/an. Service 100% sécurisé.',
+  description: 'Subside assurance maladie Vaud : faites votre demande de subside gratuitement. Accompagnement personnalisé, réponse sous 24h, 85% de demandes acceptées. Économisez jusqu\'à 8\'400 CHF/an sur vos primes LAMal dans le Canton de Vaud.',
   keywords: [
     // Mots-clés principaux - Ciblage direct concurrent
     'subside vaud',
-    'vd subside',
+    'subside assurance maladie',
     'subside assurance maladie vaud',
+    'demande de subside',
+    'demande de subside vaud',
+    'vd subside',
     'subside lamal vaud',
     'subside vd',
 
@@ -95,8 +98,8 @@ export const metadata: Metadata = {
     locale: 'fr_CH',
     url: 'https://vd-subside.ch',
     siteName: 'VD Subside',
-    title: 'Subside Assurance Maladie Vaud 2026 | VD-Subside',
-    description: 'Accompagnement gratuit pour obtenir votre subside d\'assurance maladie dans le Canton de Vaud. Réponse sous 24h. 85% de demandes acceptées. Économisez jusqu\'à 8\'400 CHF/an.',
+    title: 'Subside Vaud 2026 | Demande de Subside Assurance Maladie Gratuit',
+    description: 'Subside assurance maladie Vaud : demande de subside gratuite, accompagnement personnalisé, réponse sous 24h. 85% de demandes acceptées. Économisez jusqu\'à 8\'400 CHF/an.',
     images: [
       {
         url: '/og-image.jpg',

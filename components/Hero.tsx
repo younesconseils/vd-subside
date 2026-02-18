@@ -39,17 +39,19 @@ export default function Hero() {
 
             {/* Title with gradient */}
             <div className="space-y-4">
-              <h1 className="text-6xl md:text-7xl font-bold leading-[1.1] tracking-tight">
+              <h1 className="text-5xl md:text-7xl font-bold leading-[1.1] tracking-tight">
                 <span className="text-gray-900">Subside</span>
                 <br />
                 <span className="bg-gradient-to-r from-green-600 via-emerald-600 to-green-700 bg-clip-text text-transparent">
                   assurance maladie
                 </span>
+                <br />
+                <span className="text-gray-900">Vaud</span>
               </h1>
 
               <p className="text-xl text-gray-600 leading-relaxed max-w-xl">
-                Accompagnement personnalisé pour votre demande de subside.
-                Gratuit, rapide et 100% confidentiel.
+                Demande de subside assurance maladie dans le Canton de Vaud.
+                Accompagnement gratuit, réponse sous 24h, 100% confidentiel.
               </p>
             </div>
 

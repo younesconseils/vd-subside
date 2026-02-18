@@ -211,7 +211,7 @@ export default async function CityPage({ params }: Props) {
             </p>
 
             <h3 className="text-2xl font-bold text-gray-900">
-              Montants des subsides 2024 pour {city.name}
+              Montants des subsides 2026 pour {city.name}
             </h3>
             <p>
               Les montants des subsides pour les habitants de {city.name} sont identiques à ceux du reste 
