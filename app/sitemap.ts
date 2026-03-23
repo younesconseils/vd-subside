@@ -23,7 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Pages de situations spécifiques
   const situations = [
     'etudiant', 'chomage', 'retraite', 'independant',
-    'famille-monoparentale', 'couple-marie', 'nouveau-resident', 'apprenti'
+    'famille-monoparentale', 'apprenti', 'temps-partiel', 'famille-nombreuse'
   ];
 
   const cityPages = cities.map(city => ({
