@@ -32,8 +32,8 @@ export const guides: Guide[] = [
   // ─────────────────────────────────────────────
   {
     slug: 'comment-faire-demande-subside-vaud',
-    metaTitle: 'Comment Faire une Demande de Subside Vaud 2026 | Guide Étape par Étape',
-    metaDescription: 'Guide complet pour faire votre demande de subside assurance maladie dans le Canton de Vaud en 2026. Formulaire en ligne, documents, délais OVAM.',
+    metaTitle: 'Demande de Subside Vaud 2026 : Formulaire, Documents et Délais',
+    metaDescription: 'Comment faire votre demande de subside assurance maladie à Vaud en 2026. Formulaire OVAM, liste des documents nécessaires et délai de traitement.',
     h1: 'Comment Faire une Demande de Subside dans le Canton de Vaud en 2026',
     icon: '📝',
     intro: 'Dans le Canton de Vaud, la demande de subside assurance maladie n\'est pas automatique. Vous devez déposer un dossier auprès de l\'OVAM, soit en ligne via prestations.vd.ch, soit en vous rendant à votre agence d\'assurances sociales régionale. Ce guide vous explique chaque étape.',
@@ -341,8 +341,8 @@ export const guides: Guide[] = [
   // ─────────────────────────────────────────────
   {
     slug: 'calculer-subside-vaud-rdu',
-    metaTitle: 'Calculer son Subside Vaud 2026 | RDU Revenu Déterminant Unifié',
-    metaDescription: 'Comment calculer votre subside assurance maladie à Vaud ? Comprendre le RDU (Revenu Déterminant Unifié), les déductions et les plafonds 2026.',
+    metaTitle: 'Calcul Subside Vaud 2026 : Barème RDU et Plafonds de Revenu',
+    metaDescription: 'Calculez votre subside assurance maladie dans le Canton de Vaud. Barème RDU 2026, plafonds de revenu par situation et exemple de calcul chiffré.',
     h1: 'Comment Calculer son Subside dans le Canton de Vaud : le RDU Expliqué',
     icon: '🧮',
     intro: 'Le montant de votre subside dépend de votre Revenu Déterminant Unifié (RDU). Ce calcul prend en compte vos revenus, votre fortune et votre situation familiale avec des déductions spécifiques. Voici comment le comprendre.',
@@ -480,8 +480,8 @@ export const guides: Guide[] = [
   },
   {
     slug: 'fortune-subside-vaud-impact',
-    metaTitle: 'Impact de la Fortune sur le Subside Vaud 2026 | Immobilier, Épargne',
-    metaDescription: 'Comment votre fortune (immobilier, épargne, 3e pilier) impacte-t-elle votre droit au subside assurance maladie dans le Canton de Vaud ?',
+    metaTitle: 'Fortune et Subside Vaud 2026 : Quel Impact sur Votre Droit ?',
+    metaDescription: 'Immobilier, épargne, 3e pilier : comment votre fortune impacte votre droit au subside assurance maladie à Vaud. Seuils et exemples 2026.',
     h1: 'Comment la Fortune Impacte Votre Droit au Subside dans le Canton de Vaud',
     icon: '🏠',
     intro: 'Votre fortune (comptes bancaires, immobilier, placements) est prise en compte dans le calcul du subside. Mais des franchises importantes existent, notamment pour votre résidence principale. Voici comment cela fonctionne.',
@@ -520,8 +520,8 @@ export const guides: Guide[] = [
   },
   {
     slug: 'subside-vaud-couple-marie',
-    metaTitle: 'Subside Vaud Couple Marié 2026 | Calcul, Déductions, Montants',
-    metaDescription: 'Comment fonctionne le subside assurance maladie pour un couple marié dans le Canton de Vaud ? Calcul commun, déductions 2026 et montants.',
+    metaTitle: 'Subside Couple Marié Vaud 2026 : Montant, Calcul et Conditions',
+    metaDescription: 'Quel subside pour un couple marié dans le Canton de Vaud ? Calcul commun du RDU, montants 2026 et conditions d\'éligibilité.',
     h1: 'Subside Assurance Maladie pour Couples Mariés dans le Canton de Vaud',
     icon: '💑',
     intro: 'Pour les couples mariés dans le Canton de Vaud, le subside est calculé sur le revenu du ménage (les deux revenus additionnés) avec des déductions spécifiques pour couples. Chaque conjoint peut recevoir son propre subside.',
@@ -560,8 +560,8 @@ export const guides: Guide[] = [
   },
   {
     slug: 'subside-vaud-nouveau-resident',
-    metaTitle: 'Subside Vaud Nouveau Résident 2026 | Arrivée Canton de Vaud',
-    metaDescription: 'Nouveau résident dans le Canton de Vaud ? Découvrez comment obtenir un subside assurance maladie dès votre arrivée. Conditions et démarches 2026.',
+    metaTitle: 'Subside Nouveau Résident Vaud 2026 : Démarches dès Votre Arrivée',
+    metaDescription: 'Nouveau dans le Canton de Vaud ? Obtenez votre subside assurance maladie dès votre arrivée. Conditions, documents et démarches 2026.',
     h1: 'Subside Assurance Maladie pour Nouveaux Résidents du Canton de Vaud',
     icon: '🏡',
     intro: 'Vous venez d\'emménager dans le Canton de Vaud ? Que vous veniez d\'un autre canton suisse ou de l\'étranger, vous pouvez demander un subside assurance maladie dès votre installation. Voici les démarches spécifiques.',

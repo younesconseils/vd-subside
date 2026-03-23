@@ -60,8 +60,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     metadataBase: new URL('https://vd-subside.ch'),
-    title: `Subside ${city.name} 2026 : Conditions, Montants et Demande Gratuite | VD-Subside`,
-    description: `Subside ${city.name} : conditions d'éligibilité, montants 2026 et demande gratuite de subside assurance maladie. ${city.population} habitants de ${city.name} (Canton de Vaud) peuvent économiser jusqu'à 700 CHF/mois sur leurs primes LAMal.`,
+    title: `Subside Assurance Maladie ${city.name} 2026 : Conditions et Montants`,
+    description: `Habitants de ${city.name}, vérifiez votre droit au subside assurance maladie 2026. Barème, montants et démarches pour ${city.name} (Canton de Vaud).`,
     keywords: [
       `subside ${city.name.toLowerCase()}`,
       `subside assurance maladie ${city.name.toLowerCase()}`,
@@ -74,8 +74,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       `formulaire subside ${city.name.toLowerCase()}`,
     ],
     openGraph: {
-      title: `Subside ${city.name} 2026 : Conditions, Montants et Demande Gratuite`,
-      description: `Subside assurance maladie à ${city.name} : conditions, montants 2026 et demande gratuite. Habitants du district de ${city.district}, économisez sur vos primes LAMal.`,
+      title: `Subside Assurance Maladie ${city.name} 2026 : Conditions et Montants`,
+      description: `Habitants de ${city.name}, vérifiez votre droit au subside assurance maladie 2026. Barème, montants et démarches pour le district de ${city.district}.`,
       url: `https://vd-subside.ch/ville/${slug}`,
       siteName: 'VD-Subside',
       locale: 'fr_CH',

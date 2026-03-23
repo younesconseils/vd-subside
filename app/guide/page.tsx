@@ -3,8 +3,8 @@ import Link from 'next/link';
 import { guides } from '@/data/guides';
 
 export const metadata: Metadata = {
-  title: 'Guides Subside Assurance Maladie Vaud 2026 | VD-Subside',
-  description: 'Tous nos guides pratiques sur le subside assurance maladie dans le Canton de Vaud. Démarches, calcul, situations spécifiques, montants 2026.',
+  title: 'Subside Assurance Maladie Vaud 2026 : Tous les Guides Pratiques',
+  description: 'Barème, calcul RDU, documents, demande, montants : tous les guides pour obtenir votre subside assurance maladie dans le Canton de Vaud en 2026.',
 };
 
 export default function GuidesIndexPage() {
