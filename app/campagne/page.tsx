@@ -12,7 +12,7 @@ export default function CampaignPage() {
     <main className="min-h-screen bg-gradient-to-br from-green-50 via-white to-green-50">
       {/* Top bar */}
       <div className="bg-green-700 text-white text-center py-2.5 px-4 text-sm font-medium">
-        Places limitées — Accompagnement gratuit pour votre demande de subside 2026
+        Intermédiaire d'assurance agréé FINMA — Accompagnement gratuit pour les résidents du Canton de Vaud
       </div>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 md:py-12">
@@ -37,20 +37,19 @@ export default function CampaignPage() {
             </div>
 
             <h1 className="text-3xl md:text-4xl lg:text-[2.75rem] font-extrabold text-gray-900 leading-tight mb-5">
-              Vous payez trop cher<br />
-              <span className="text-green-600">votre assurance maladie ?</span>
+              Subside assurance maladie<br />
+              <span className="text-green-600">Canton de Vaud 2026</span>
             </h1>
 
             <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-              Chaque année, des milliers de Vaudois passent à côté de leur subside.
-              Vérifiez votre éligibilité en 30 secondes et laissez-nous nous occuper de votre dossier.
+              Vérifiez votre éligibilité au subside d'assurance maladie et bénéficiez d'un accompagnement personnalisé et gratuit pour votre demande.
             </p>
 
             {/* Key stats */}
             <div className="grid grid-cols-3 gap-4 mb-8">
               <div className="bg-white rounded-xl p-4 border border-gray-100 shadow-sm text-center">
                 <div className="text-2xl md:text-3xl font-extrabold text-green-600">8 400</div>
-                <div className="text-xs text-gray-500 mt-1">CHF/an d'économie max.</div>
+                <div className="text-xs text-gray-500 mt-1">CHF/an de subside max.</div>
               </div>
               <div className="bg-white rounded-xl p-4 border border-gray-100 shadow-sm text-center">
                 <div className="text-2xl md:text-3xl font-extrabold text-green-600">24h</div>
@@ -150,15 +149,15 @@ export default function CampaignPage() {
               <div className="inline-flex items-center justify-center w-14 h-14 bg-green-100 text-green-700 font-extrabold text-xl rounded-2xl mb-4">
                 2
               </div>
-              <h4 className="font-bold text-gray-900 mb-2">On analyse votre dossier</h4>
-              <p className="text-sm text-gray-500">Notre expert vérifie votre éligibilité et calcule votre subside potentiel.</p>
+              <h4 className="font-bold text-gray-900 mb-2">Analyse de votre dossier</h4>
+              <p className="text-sm text-gray-500">Un conseiller dédié vérifie votre éligibilité et calcule votre subside potentiel.</p>
             </div>
             <div className="text-center">
               <div className="inline-flex items-center justify-center w-14 h-14 bg-green-100 text-green-700 font-extrabold text-xl rounded-2xl mb-4">
                 3
               </div>
-              <h4 className="font-bold text-gray-900 mb-2">Vous économisez</h4>
-              <p className="text-sm text-gray-500">On s'occupe de tout. Vous recevez votre subside, sans stress.</p>
+              <h4 className="font-bold text-gray-900 mb-2">Vous recevez votre subside</h4>
+              <p className="text-sm text-gray-500">Nous nous occupons de l'ensemble des démarches administratives pour vous.</p>
             </div>
           </div>
         </div>
