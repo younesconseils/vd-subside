@@ -10,11 +10,6 @@ export const metadata: Metadata = {
 export default function CampaignPage() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-green-50 via-white to-green-50">
-      {/* Top bar */}
-      <div className="bg-green-700 text-white text-center py-2.5 px-4 text-sm font-medium">
-        Intermédiaire d'assurance agréé FINMA — Accompagnement gratuit pour les résidents du Canton de Vaud
-      </div>
-
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 md:py-12">
         {/* Logo */}
         <div className="text-center mb-8">
