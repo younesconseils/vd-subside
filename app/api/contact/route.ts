@@ -97,6 +97,20 @@ export async function POST(request: Request) {
                   </div>
                   ` : ''}
 
+                  ${data.dateNaissance ? `
+                  <div class="info-row">
+                    <span class="label">🎂 Date de naissance :</span>
+                    <span class="value">${data.dateNaissance}</span>
+                  </div>
+                  ` : ''}
+
+                  ${data.optimiserPrime ? `
+                  <div class="info-row">
+                    <span class="label">💡 Optimiser prime :</span>
+                    <span class="value">${data.optimiserPrime === 'oui' ? '✅ Oui, souhaite optimiser sa prime' : '❌ Non'}</span>
+                  </div>
+                  ` : ''}
+
                   ${data.message ? `
                   <div class="info-row">
                     <span class="label">💬 Message :</span>
@@ -105,8 +119,8 @@ export async function POST(request: Request) {
                   ` : ''}
 
                   <div class="info-row">
-                    <span class="label">🔗 Page d'origine :</span>
-                    <span class="value"><a href="https://vd-subside.ch${data.source}" style="color: #16a34a; text-decoration: underline;">https://vd-subside.ch${data.source}</a></span>
+                    <span class="label">🔗 Source :</span>
+                    <span class="value">${data.source === 'campagne-mail' ? '📧 Campagne email' : `<a href="https://vd-subside.ch${data.source}" style="color: #16a34a;">${data.source}</a>`}</span>
                   </div>
 
                   <div class="footer">
