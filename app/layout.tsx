@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import CookieBanner from "@/components/CookieBanner";
+import Footer from "@/components/Footer";
 
 const inter = Inter({ 
   subsets: ["latin"],
@@ -196,8 +197,11 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="antialiased bg-white">
-        {children}
+      <body className="antialiased bg-white flex flex-col min-h-screen">
+        <div className="flex-grow">
+          {children}
+        </div>
+        <Footer />
         <CookieBanner />
       </body>
     </html>
