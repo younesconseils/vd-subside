@@ -1,21 +1,25 @@
 import { NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
 
-const supabase = process.env.SUPABASE_URL && process.env.SUPABASE_ANON_KEY
-  ? createClient(process.env.SUPABASE_URL, process.env.SUPABASE_ANON_KEY)
-  : null;
+export const dynamic = 'force-dynamic';
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const password = searchParams.get('key');
+  const adminPwd = process.env.ADMIN_PASSWORD;
 
-  if (password !== process.env.ADMIN_PASSWORD) {
+  if (!adminPwd || password !== adminPwd) {
     return NextResponse.json({ error: 'Non autorisé' }, { status: 401 });
   }
 
-  if (!supabase) {
+  const supabaseUrl = process.env.SUPABASE_URL;
+  const supabaseKey = process.env.SUPABASE_ANON_KEY;
+
+  if (!supabaseUrl || !supabaseKey) {
     return NextResponse.json({ error: 'Supabase non configuré' }, { status: 500 });
   }
+
+  const supabase = createClient(supabaseUrl, supabaseKey);
 
   try {
     const { data, error } = await supabase
