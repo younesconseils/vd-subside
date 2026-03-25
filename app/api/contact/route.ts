@@ -1,8 +1,14 @@
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
+import { createClient } from '@supabase/supabase-js';
 
 // Initialiser Resend seulement si la clé API est présente
 const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null;
+
+// Initialiser Supabase
+const supabase = process.env.SUPABASE_URL && process.env.SUPABASE_ANON_KEY
+  ? createClient(process.env.SUPABASE_URL, process.env.SUPABASE_ANON_KEY)
+  : null;
 
 export async function POST(request: Request) {
   try {
@@ -145,7 +151,27 @@ export async function POST(request: Request) {
       console.warn('⚠️ Resend non configuré - Email non envoyé. Configurez RESEND_API_KEY dans les variables d\'environnement.');
     }
 
-    // Log pour backup
+    // Backup Supabase — sauvegarde chaque lead dans la base de données
+    if (supabase) {
+      try {
+        await supabase.from('leads').insert({
+          nom: data.nom,
+          prenom: data.prenom,
+          email: data.email,
+          telephone: data.telephone,
+          ville: data.ville || null,
+          date_naissance: data.dateNaissance || null,
+          optimiser_prime: data.optimiserPrime || null,
+          source: data.source || 'site',
+          page_origine: data.pageOrigine || null,
+        });
+        console.log('✅ Lead sauvegardé dans Supabase:', data.email);
+      } catch (supabaseError) {
+        console.error('❌ Erreur Supabase:', supabaseError);
+      }
+    }
+
+    // Log pour backup console
     console.log('📨 Nouvelle demande de subside reçue:', {
       nom: data.nom,
       prenom: data.prenom,
