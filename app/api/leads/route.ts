@@ -9,7 +9,7 @@ export async function GET(request: Request) {
   const adminPwd = process.env.ADMIN_PASSWORD;
 
   if (!adminPwd || password !== adminPwd) {
-    return NextResponse.json({ error: 'Non autorisé' }, { status: 401 });
+    return NextResponse.json({ error: 'Non autorisé', debug: { hasAdminPwd: !!adminPwd, hasPassword: !!password, match: password === adminPwd } }, { status: 401 });
   }
 
   const supabaseUrl = process.env.SUPABASE_URL;
